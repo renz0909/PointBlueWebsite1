@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.pointblue.ph/</loc>
+  <lastmod>2019-09-11T02:30:53+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.pointblue.ph/projects.html</loc>
+  <lastmod>2019-09-11T01:01:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pointblue.ph/faq.html</loc>
+  <lastmod>2019-09-11T01:02:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pointblue.ph/visit.html</loc>
+  <lastmod>2019-09-11T06:01:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pointblue.ph/virtualtours.html</loc>
+  <lastmod>2019-09-12T07:42:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.pointblue.ph/index.html</loc>
+  <lastmod>2019-09-11T02:30:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.pointblue.ph/virtualtourvisit.html</loc>
+  <lastmod>2019-09-11T05:11:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
