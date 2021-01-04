@@ -529,7 +529,7 @@
 											var preffered_time = document.getElementById("preffered_time").value;
 											var location = document.getElementById("location").value;
 											var result = location.split("-");
-											var link = "https://script.google.com/macros/s/AKfycby26vjJ1P6fPDrWfR0y4bEDyV45Oy5ut-miWi9m_XwaWzMHQ3E/exec?code=" + result[1] + "&name=" + name + "&email=" + email + "&preffered_tour_date=" + preffered_date + "&preffered_tour_time=" + preffered_time + "&contact_number=" + mobile_number + "&pref_location="+ result[0];
+											var link = "https://script.google.com/macros/s/AKfycbwn2DO770FAgfjUKUgijQ2bGoHDHb84zaHb32JwGovQG2FylzhBP0aq/exec?code=" + result[1] + "&name=" + name + "&email=" + email + "&preffered_tour_date=" + preffered_date + "&preffered_tour_time=" + preffered_time + "&contact_number=" + mobile_number + "&pref_location="+ result[0];
 
 											fetch(link).then(res => res.json())
 												.then((data) => {

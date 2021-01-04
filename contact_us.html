@@ -390,7 +390,7 @@
 				</div>
 				<div class="row">
 					<div class="column width-12 center">
-						<a href='#' target='_blank'  type="submit" value="Schedule a Visit"
+						<a href='https://script.google.com/macros/s/AKfycbwuPcpJbZ-v7NS6eILDi0ngxR411BWyooFhswEJXFWVV2t3v7I/exec' target='_blank'  type="submit" value="Schedule a Visit"
 							class="rounded medium bkg-hover-theme button color-hover-white color-white other-buttons"><b>Apply for a Unit
 								</b></a>
 					</div>
@@ -459,11 +459,13 @@
 		
 		function uploadData() {
 	
+			var url_origin = window.location.href;
 			var name = document.getElementById("name").value;
 			var email = document.getElementById("email").value;
 			var mobile_number = document.getElementById("mobile_number").value;
 			var inquiry = document.getElementById("inquiry").value;
-			var link = "https://script.google.com/macros/s/AKfycbzPjr-Vyhbp7HvuzdJvhE68ea76sZQ_APPRXf6fYtJVsx2oBJ0E/exec?name="+name+"&contact_number="+mobile_number+"&email="+email+"&inquiry="+inquiry;
+			var url_origin = url_origin;
+			var link = "https://script.google.com/macros/s/AKfycbwTNwRuaDZUDwGakONXNRGR5r1uBS_YygXa3EIw_Xt2V2DCrp_8-EGMQQ/exec?name="+name+"&contact_number="+mobile_number+"&email="+email+"&inquiry="+inquiry+"&url_origin="+url_origin;
 			
 			fetch(link).then(res => res.json())
 		.then((data) => {
@@ -474,7 +476,10 @@
 		console.log(data);
 
 		document.getElementById("link_visit").href="schedule_visit.html?name="+data.name+"&email="+data.email+"&contact_number="+data.contact_number;
-		
+		document.getElementById("name").value = "";
+		document.getElementById("email").value = "";
+		document.getElementById("mobile_number").value = "";
+		document.getElementById("inquiry").value = "";
 		  
 		})
 		.catch(err => { throw err });
