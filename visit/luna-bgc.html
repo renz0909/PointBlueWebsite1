@@ -100,11 +100,18 @@
             <li><a href=../index.html#fees>Monthly Fees</a>
             <li><a href="../projects.html">Upcoming Projects</a>
             <li><a href="../faq.html">FAQ</a>
-            <li class=current><a href="../visit.html"><b><u>Schedule a Visit</u></b></a>
-            <li class=current><a href="../virtual-tours.html"><b><u>Virtual Tour</u></b><b>
-                  <font color="#FFC632">(NEW!)</font>
-                </b></a>
-            <li class=current><a href="../covid.html"><b><u>COVID-19</u></b></a>
+              <li class=><a href=""><b><u></u>Get Started</u></b></a>
+                <ul class="sub-menu">
+                  <li><a href="../contact_us.html">Contact Us</a></li>
+
+                  <li><a href="../schedule_visit.html">Schedule a Visit</a></li>
+                </ul>
+              </li>
+              <li class=current>
+                <p
+                  class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
+                  <a href="../contact_us.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a></p>
+              <li class=current><a href="../covid.html"><b><u>COVID-19</u></b></a>
           </ul>
         </nav>
 
@@ -181,12 +188,18 @@
                   <li><a href=../index.html#fees>Monthly Fees</a>
                   <li><a href="../projects.html">Upcoming Projects</a>
                   <li><a href="../faq.html">FAQ</a>
-                  <li class=current><a href="../visit.html"><b><u>Schedule a Visit</u></b></a></li>
-                  <li class=current>
-                    <p
-                      class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
-                      <a href="../virtual-tours.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a></p>
-                  <li class=current><a href="../covid.html"><b><u>COVID-19</u></b></a>
+                    <li class=><a href=""><b><u></u>Get Started</u></b></a>
+                      <ul class="sub-menu">
+                        <li><a href="../contact_us.html">Contact Us</a></li>
+  
+                        <li><a href="../schedule_visit.html">Schedule a Visit</a></li>
+                      </ul>
+                    </li>
+                    <li class=current>
+                      <p
+                        class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
+                        <a href="../contact_us.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a></p>
+                    <li class=current><a href="../covid.html"><b><u>COVID-19</u></b></a>
                    
                 </ul>
               </nav>
@@ -243,8 +256,7 @@
                   class="lightbox-link" data-content=iframe data-modal-mode="" data-toolbar="">
                   <button class="small other-buttons button color-white"><b>Vicinity Map</b></button>
                 </a>
-                <a href="../glu_visit.html" class="lightbox-link" data-content=iframe data-modal-mode=""
-                  data-toolbar="">
+                <a href="../schedule_visit.html"  target='_blank'>
                   <button class="small other-buttons button color-white"><b>Schedule a Visit</b></button>
                 </a>
                 <a href="../virtual-tours.html"><button class="small other-buttons button color-white"><b>Take a
@@ -396,3 +408,27 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src=../js/jquery.tm.avalanche.js></script>
   <script src=../js/timber.master.min.js></script>
+  <div id="fb-root"></div>
+     <script>
+       window.fbAsyncInit = function() {
+         FB.init({
+           xfbml            : true,
+           version          : 'v9.0'
+         });
+       };
+
+       (function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));</script>
+
+     <!-- Your Chat Plugin code -->
+     <div class="fb-customerchat"
+       attribution=setup_tool
+       page_id="463900637331486">
+     </div>
+</body>
+</html>
