@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <!-- Facebook Pixel Code -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1578307398971509');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1578307398971509&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+    <!--Loader Image-->
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+    <style>
+        .loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: rgb(249, 249, 249);
+            opacity: .8;
+            background-size: 200px 120px;
+        }
+
+        .city {
+            font-family: 'Merriweather';
+        }
+
+        .loader-page {
+
+            position: absolute;
+            left: 50%;
+            top: 50vh;
+            z-index: 1;
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #192a48;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+            /* width: 100%;
+		height: 100%; */
+            z-index: 1;
+            /* background: url("loader.gif") 50% 50% no-repeat rgb(249, 249, 249); */
+            /* opacity: .8; */
+            /* background-size: 200px 120px; */
+
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Facebook Pixel Code -->
+
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '185667705862961');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=185667705862961&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96095477-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-96095477-3');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+    <meta name="description" itemprop="description"
+        content="Point Blue | Visit us | Makati BGC Studio Apartment | Philippines | We're glad that you're interested to discover more about our community! | Send us a message or Schedule a Visit">
+    <meta name="keywords" itemprop="keywords" content="Point Blue, makati bgc studio apartment">
+    <meta content="Paolo Ernesto Uy" name=author>
+    <meta property="og:title" content="Point Blue Ã‚Â· Visit" />
+    <meta property="og:url" content="http://www.pointblue.ph" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://www.pointblue.ph/images/header/showcase.jpg" />
+    <meta property="og:description"
+        content="Furnished living spaces with WiFi just a 15-minute walk to BGC renting from P13,200 to max P15,000 monthly. Absolutely no hidden charges!" />
+    <meta name="twitter:widgets:theme" content="light">
+    <title>Point Blue | Schedule a Visit | Makati BGC Studio Apartment | PH</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/point-blue-favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href=css/core.min.css rel=stylesheet>
+    <link href=css/skin.min.css rel=stylesheet>
+
+    <link href=css/style.css rel=stylesheet>
+    
+    
+
+    <!-- <link href=css/custom.css rel=stylesheet> -->
+    <!--[if lt IE 9]> <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+</head>
+
+<body class="shop">
+    <div id="myDiv" style="display:none;" class="loader">
+        <div class="loader-page">
+
+        </div>
+    </div>
+    <aside class="enter-right side-navigation-wrapper" data-animation=scale-in data-no-scrollbar>
+        <div class=side-navigation-scroll-pane>
+            <div class=side-navigation-inner>
+                <div class=side-navigation-header>
+                    <div class="navgiation-hide side-nav-hide"><a href=#><span class="medium icon-cancel"></span></a>
+                    </div>
+                </div>
+                <nav class="nav-block side-navigation">
+                    <ul>
+                        <!-- <li class=""><a href=index.html#overview>Overview</a> -->
+                        <!-- <li><a href=index.html#locations class="contains-sub-menu">Locations</a>
+                            <ul class=sub-menu>
+                                <li><a href="visit/bonifacio-point.html">Bonifacio Point<br><sub>10 min walk to JPMorgan
+                                            BGC</a>
+                                <li><a href="visit/ricarte-bgc.html">Ricarte BGC<br><sub>5 min walk to Grand Hyatt
+                                            BGC</a>
+                                <li><a href="visit/teka-makati.html">Teka Makati<br><sub>10 min walk to
+                                            Ayala/Buendia</sub></a>
+                                <li><a href="visit/estrella-makati.html">Estrella Makati<br><sub>10 min walk to
+                                            Ayala/Buendia</sub></a>
+                                <li><a href="visit/quezon-street-bgc.html">Quezon BGC<br><sub>5 min walk to Uptown
+                                            BGC</sub></a>
+                                <li><a href="visit/luna-bgc.html">Luna BGC<br><sub>5 min walk to Grand Hyatt
+                                            BGC</sub></a>
+                            </ul> -->
+                            <li><a href="locations.html">Locations</a></li>
+                        <li><a href=index.html#design>Design & Inclusions</a>
+                        <li><a href=index.html#fees>Monthly Fees</a>
+                        <li><a href="projects.html">Upcoming Projects</a>
+                        <li>
+                            <a href="#" class="scroll-link contains-sub-menu">FAQ</a>
+                            <ul class="sub-menu">
+                                <li><a href="faq.html">Frequest Questions</a></li>
+
+                                <li><a href="covid.html">COVID-19 Protocols</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="scroll-link contains-sub-menu"><b><u></u>Get Started</u></b></a>
+                            <ul class="sub-menu">
+                                <li><a href="contact_us.html">Contact Us</a></li>
+
+                                <li><a href="schedule_visit.html">Schedule a Visit</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="nav-block side-navigation">
+                    <ul class="list-horizontal social-list">
+
+                        <li class="scroll-link"><a href=https://www.facebook.com/pointblueph><span <span
+                                    class="medium icon-facebook"><span class="font-sample"> Point Blue</span></span></a>
+                        <li class="scroll-link"><a href=https://www.instagram.com/pointblueph><span
+                                    class="medium icon-instagram"><span class="font-sample">
+                                        pointblueph</span></span></a>
+                        <li class="scroll-link"><a href="tel:+639171332583"><span class="medium icon-mobile"><span
+                                        class="font-sample"> 0917 133 2583</span></span></a>
+                        <li><a href="mailto:info@pointblue.ph"><span class="medium icon-mail-with-circle"><span
+                                        class="font-sample"> info@pointblue.ph</span></span></a>
+                </nav>
+                <div class=side-navigation-footer>
+                    <p class="copyright no-margin-bottom">Point Blue - 2018
+                </div>
+            </div>
+        </div>
+    </aside>
+    <div class="wrapper reveal-side-navigation">
+        <div class="wrapper-inner">
+            <header class="header header-relative header-fixed-on-mobile nav-dark" data-bkg-threshold="100"
+                data-sticky-threshold="0">
+                <div class="header-inner">
+                    <div class="row nav-bar">
+                        <div class="nav-bar-inner">
+                            <div class="logo" style="width:180px!important;">
+                                <div class="logo-inner">
+                                    <a href="index.html"><img src="images/point-blue-logo.png" alt="Point Blue" /></a>
+                                    <a href="index.html"><img src="images/point-blue-logo.png" alt="Point Blue" /></a>
+                                </div>
+                            </div>
+                            <nav class="navigation nav-block secondary-navigation nav-right">
+                                <ul>
+                                    <li class="aux-navigation hide">
+                                        <a href="#" class="navigation-show side-nav-show nav-icon"> <span
+                                                class="icon-menu"></span> </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav class="navigation nav-block primary-navigation nav-right">
+                                <ul>
+                                    <!-- <li class=""> <a href="index.html#overviews">Overview</a></li> -->
+                                    <!-- <li>
+                                        <a style='pointer-events: none;'>Locations</a>
+                                        <ul class="sub-menu">
+                                            <li><a style='pointer-events: none;'>BGC<span class="icon-right"></span></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="visit/bonifacio-point.html">Bonifacio Point<br><sub>10
+                                                                min walk to JPMorgan
+                                                                BGC</sub></a></li>
+                                                    <li><a href="visit/ricarte-bgc.html">Ricarte BGC<br><sub>5 min walk
+                                                                to Grand Hyatt
+                                                                BGC</sub></a></li>
+                                                    <li><a href="visit/luna-bgc.html">Luna BGC<br><sub>5 min walk to
+                                                                Grand Hyatt BGC</sub></a>
+                                                    </li>
+                                                    <li><a href="visit/quezon-street-bgc.html">Quezon BGC<br><sub>5 min
+                                                                walk to Uptown
+                                                                BGC</sub></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a style='pointer-events: none;'>Makati<span
+                                                        class="icon-right"></span></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="visit/estrella-makati.html">Estrella Makati<br><sub>10
+                                                                min walk to
+                                                                Ayala/Buendia</sub></a></li>
+                                                    <li><a href="visit/teka-makati.html">Teka Makati<br><sub>10 min walk
+                                                                to
+                                                                Ayala/Buendia</sub></a></li>
+
+
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li> -->
+                                    <li><a href="locations.html">Locations</a></li>
+                                    <li class=""> <a href="index.html#design">Design &amp; Inclusions</a></li>
+                                    <li class=""> <a href="index.html#fees">Monthly Fees</a></li>
+                                    <li class=""> <a href="projects.html">Upcoming Projects</a></li>
+                                    <li>
+                                        <a href="#" class="scroll-link contains-sub-menu">FAQ</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="faq.html">Frequest Questions</a></li>
+
+                                            <li><a href="covid.html">COVID-19 Protocols</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="scroll-link contains-sub-menu"><b><u></u>Get
+                                                Started</u></b></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="contact_us.html">Contact Us</a></li>
+
+                                            <li><a href="schedule_visit.html">Schedule a Visit</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="content clearfix">
+                <div class="section-block bkg-grey-ultralight pt-70 pb-70">
+                    <div class="row">
+                        <div class="column width-12">
+                            <div class="title-container">
+                                <div class="title-container-inner">
+                                    <div class="row flex">
+                                        <div class="column width-6 v-align-middle">
+                                            <div>
+                                                <!-- <h3 class="mb-0">I am looking for a place to stay around</h3> -->
+                                            </div>
+                                        </div>
+                                        <div class="column width-6 v-align-middle">
+                                            <div>
+                                                <ul
+                                                    class="breadcrumb inline-block mb-0 pull-right clear-float-on-mobile">
+                                                    <li> <a href="locations.html">Locations</a></li>
+                                                    <li>Makati</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="column width-5">
+                            <div class="title-container">
+                                <div class="title-container-inner">
+                                    <div class="row flex pb-50">
+                                        <div class="column width-12 v-align-middle w3-animate-left ">
+                                            <div>
+                                                <h3 class="mb-0"><span class='city'>Bonifacio Global City</span></h3>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row flex pb-40 w3-animate-left ">
+                                        <div class="column width-1 v-align-middle">
+                                            <div>
+                                                <h4 class="mb-0">&nbsp;</h4>
+                                            </div>
+                                        </div>
+                                        <div class="column width-6 v-align-middle">
+                                            <div data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
+                                                <a href="#" onclick='myMap(14.560067,121.045951,"visit/bonifacio-point.html","bonifacio_point")'><h4 class="mb-0">Bonifacio Point</h4></a>
+                                                <img class='w3-animate-bottom' id='image_bp'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row flex pb-40 w3-animate-left " >
+                                        <div class="column width-1 v-align-middle">
+                                            <div>
+                                                <h4 class="mb-0">&nbsp;</h4>
+                                            </div>
+                                        </div>
+                                        <div class="column width-6 v-align-middle">
+                                            <div>
+                                                <a href="#" onclick='myMap(14.557541,121.048855,"visit/ricarte-bgc.html","ricarte")'> <h4 class="mb-0">Recarte BGC</h4></a>
+                                                <img id='image_ricarte' class='w3-animate-bottom'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row flex pb-40 w3-animate-left " >
+                                        <div class="column width-1 v-align-middle">
+                                            <div>
+                                                <h4 class="mb-0">&nbsp;</h4>
+                                            </div>
+                                        </div>
+                                        <div class="column width-6 v-align-middle">
+                                            <div>
+                                                <a href="#" onclick='myMap(14.557555,121.048359,"visit/luna-bgc.html","luna")'> <h4 class="mb-0">Luna BGC</h4></a>
+                                                <img id='image_luna' class='w3-animate-bottom'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row flex pb-40 w3-animate-left " >
+                                        <div class="column width-1 v-align-middle">
+                                            <div>
+                                                <h4 class="mb-0">&nbsp;</h4>
+                                            </div>
+                                        </div>
+                                        <div class="column width-6 v-align-middle">
+                                            <div>
+                                                <a href="#" onclick='myMap(14.561634,121.051591,"visit/quezon-bgc.html","quezon")'> <h4 class="mb-0">Quezon BGC</h4></a>
+                                                <img id='image_quezon' class='w3-animate-bottom'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column width-7 w3-animate-opacity">
+                                <div id="mapD" style="height:375px;"></div>
+                                <br>
+                            <br>
+                            
+                            <div class='column width-9 v-align-middle'>&nbsp;</div>
+                            <div class='column width-3 v-align-middle'> <a id='view_more' href="#"  target='_blank' style='display:none;'> <button class="small other-buttons button color-white">View More</button>
+                              </a></div>
+                            <!-- <div class='column width-9 v-align-middle'>&nbsp;</div>
+                            <div class='column width-3 v-align-middle'><a  href=''>View More</a></div> -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <footer class="footer footer-light border-top">
+                    <div class="footer-top">
+                        <div class="row flex">
+                            <div class="column width-5">
+
+                            </div>
+                            <div class="column width-6 offset-1">
+                                <div class="row flex two-columns-on-tablet">
+                                    <div class="column width-4 offset-4">
+                                        <div class=widget>
+                                            <h3 class="mb-30 widget-title">Microstudios</h3>
+                                            <ul>
+                                                <li><a href="index.html#overview">Overview</a>
+                                                <li><a href=index.html#design>Design & Inclusions</a>
+                                                <li><a href=index.html#fees>Monthly Fees</a>
+                                                <li><a href=faq.html>FAQ</a>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="column width-4">
+                                        <div class=widget>
+                                            <h3 class="mb-30 widget-title">Company</h3>
+                                            <ul>
+                                                <li><a href=index.html#overview>About</a> </li>
+                                                <li><a href=index.html#fees>Terms</a></li>
+                                                <li><a href=privacy-policy.html>Privacy Policy</a></li>
+                                                <li>
+                                                    <a href=https://www.facebook.com/pointblueph>
+                                                        <span class='small facebook-icon'>
+                                                            <span class="font-sample-xs"> Point Blue</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.instagram.com/pointblueph" target="_blank">
+                                                        <span class="small ig-icon">
+                                                            <span class="font-sample-xs"> pointblueph </span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="tel:+639171332583">
+                                                        <span class="icon-mobile small"><span class="font-sample-xs">
+                                                                0917 133 2583</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="mailto:info@pointblue.ph">
+                                                        <span class="small email-icon"">
+														<span class=" font-sample-xs"> info@pointblue.ph
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row flex">
+                            <div class="column width-12">
+                                <hr class="mb-10 mb-mobile-30">
+                            </div>
+                            <div class="column width-6">
+                                <p class="copyright clear-float-on-mobile pull-left"> &copy; 2018 78 Point Blue Inc.
+                            </div>
+                            <div class="column width-6">
+                                <p class="copyright clear-float-on-mobile pull-right">Building and view not to scale.
+                            </div>
+                        </div>
+                </footer>
+            </div>
+        </div>
+        <script>
+            function myMap(lat, lang,location,id) 
+            {
+                var iconbase = 'images/assets/map-marker-mini.png';
+                if (lat) {
+                    var latD = lat;
+                    var lngD = lang;
+                    var mapCanvasD = document.getElementById("mapD");
+                    var mapOptionsD = {
+                        center: new google.maps.LatLng(latD, lngD),
+                        zoom: 18,
+                        scrollwheel: false
+                    };
+                    var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+                    var markerD = new google.maps.Marker({
+                        position: new google.maps.LatLng(latD, lngD),
+                        map: mapD,
+                    });
+                    // alert(location);
+                    document.getElementById("view_more").href=location; 
+                    document.getElementById("view_more").style.display = "block";
+                    if(id == "bonifacio_point")
+                    {
+                  
+                    // document.getElementById("image_estrella_makati").src = url;
+                    document.getElementById("image_bp").style.display = "block";
+                    document.getElementById("image_ricarte").style.display = "none";
+                    document.getElementById("image_luna").style.display = "none";
+                    document.getElementById("image_quezon").style.display = "none";
+                    }
+                    else if(id == "ricarte")
+                    {
+                    
+                        // document.getElementById("image_teka").src = url;
+                        document.getElementById("image_bp").style.display = "none";
+                    document.getElementById("image_ricarte").style.display = "block";
+                    document.getElementById("image_luna").style.display = "none";
+                    document.getElementById("image_quezon").style.display = "none";
+                    }
+                    else if(id == "luna")
+                    {
+                    
+                        // document.getElementById("image_teka").src = url;
+                        document.getElementById("image_bp").style.display = "none";
+                    document.getElementById("image_ricarte").style.display = "none";
+                    document.getElementById("image_luna").style.display = "block";
+                    document.getElementById("image_quezon").style.display = "none";
+                    }
+                    else
+                    {
+                        document.getElementById("image_bp").style.display = "none";
+                    document.getElementById("image_ricarte").style.display = "none";
+                    document.getElementById("image_luna").style.display = "none";
+                    document.getElementById("image_quezon").style.display = "block";
+                    }
+                }
+
+                else {
+                    var latD = 14.560067;
+                    var lngD = 121.045951;
+                    
+                    var first_pointx = 14.560067;
+                    var second_pointx = 14.557541;
+                    var third_pointx = 14.557555;
+                    var fourth_pointx = 14.561634;
+
+                    var first_pointy = 121.045951;
+                    var second_pointy = 121.048855;
+                    var third_pointy = 121.048359;
+                    var fourth_pointy = 121.051591;
+                    
+                    var center_x = (first_pointx + second_pointx)/2;
+                    var center_y = (first_pointy + second_pointy)/2;
+
+                    var first_tri_x = (first_pointx + second_pointx + fourth_pointx)/3;
+                    var first_tri_y = (first_pointy + second_pointy + fourth_pointy)/3;
+
+                    var sec_tri_x = (second_pointx + third_pointx + fourth_pointx)/3;
+                    var sec_tri_y = (second_pointy + third_pointy + fourth_pointy)/3;
+
+                    var center_x = (first_tri_x + sec_tri_x)/2;
+                    var center_y = (first_tri_y + sec_tri_y)/2;
+
+                    var mapCanvasD = document.getElementById("mapD");
+                    var mapOptionsD = {
+                        center: new google.maps.LatLng(center_x, center_y),
+                        zoom: 16,
+                        scrollwheel: false
+                    };
+                    var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+                    var markerD = new google.maps.Marker({
+                        position: new google.maps.LatLng(latD, lngD),
+                        map: mapD,
+                    });
+                    var markerD = new google.maps.Marker({
+                        position: new google.maps.LatLng(14.557541,121.048855),
+                        map: mapD,
+                    });
+
+                    var markerD = new google.maps.Marker({
+                        position: new google.maps.LatLng(14.557555,121.048359),
+                        map: mapD,
+                    });
+                    var markerD = new google.maps.Marker({
+                        position: new google.maps.LatLng(14.561634,121.051591),
+                        map: mapD,
+                    });
+                    
+                }
+
+            }
+           
+        </script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script> -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSpk2-I61V7TFFomaxqOWv-Ir2ZeYkQM&callback=myMap"></script>
+        <script src="js/timber.master.min.js"></script>
+        <div id="fb-root"></div>
+        <script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    xfbml: true,
+                    version: 'v9.0'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        <!-- Your Chat Plugin code -->
+        <div class="fb-customerchat" attribution=setup_tool page_id="463900637331486">
+        </div>
+</body>
+
+</html>
