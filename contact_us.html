@@ -20,7 +20,8 @@
 		fbq('init', '1578307398971509');
 		fbq('track', 'PageView');
 	</script>
-	<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1578307398971509&ev=PageView&noscript=1" /></noscript>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=1578307398971509&ev=PageView&noscript=1" /></noscript>
 	<!-- End Facebook Pixel Code -->
 
 
@@ -129,10 +130,13 @@
 	<meta name="twitter:widgets:theme" content="light">
 	<title>Point Blue | Schedule a Visit | Makati BGC Studio Apartment | PH</title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/point-blue-favicon.ico">
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext"
+		rel="stylesheet">
 	<link href=css/core.min.css rel=stylesheet>
 	<link href=css/skin.min.css rel=stylesheet>
-	
+
+	<link href=css/style.css rel=stylesheet>
 	<!-- <link href=css/custom.css rel=stylesheet> -->
 	<!--[if lt IE 9]> <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 
@@ -153,7 +157,7 @@
 				</div>
 				<nav class="nav-block side-navigation">
 					<ul>
-						<li class=""><a href=index.html#overview>Overview</a>
+						<!-- <li class=""><a href=index.html#overview>Overview</a> -->
 						<li><a href=index.html#locations class="contains-sub-menu">Locations</a>
 							<ul class=sub-menu>
 								<li><a href="visit/bonifacio-point.html">Bonifacio Point<br><sub>10 min walk to JPMorgan
@@ -169,21 +173,27 @@
 								<li><a href="visit/luna-bgc.html">Luna BGC<br><sub>5 min walk to Grand Hyatt
 											BGC</sub></a>
 							</ul>
-						<li><a href=index.html#design>Design & Inclusions</a>
-						<li><a href=index.html#fees>Monthly Fees</a>
-						<li><a href="projects.html">Projects</a>
-						<li><a href="faq.html">FAQ</a>
-						<li class=><a href=""><b><u></u>Get Started</u></b></a>
+						<li><a href=index.html#design>Design & Inclusions</a></li>
+						<li><a href=index.html#fees>Monthly Fees</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li>
+							<a href="#" class="scroll-link contains-sub-menu">FAQ</a>
+							<ul class="sub-menu">
+								<li><a href="faq.html">Frequest Questions</a></li>
+
+								<li><a href="covid.html">COVID-19 Protocols</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="scroll-link contains-sub-menu"><b><u></u>Get Started</u></b></a>
 							<ul class="sub-menu">
 								<li><a href="contact_us.html">Contact Us</a></li>
 
 								<li><a href="schedule_visit.html">Schedule a Visit</a></li>
 							</ul>
 						</li>
-						<li class=current><a href="virtual-tours.html"><b><u>Virtual Tour</u></b><b>
-									<font color="#FFC632">(NEW!)</font>
-								</b></a>
-						<li class=current><a href="covid.html"><b><u>COVID-19</u></b></a>
+						<!-- <li class=current><a href="virtual-tours.html"><b><u>Virtual Tour</u></b><b><font color="#FFC632">(NEW!)</font></b></a> -->
+						<!-- <li class=current><a href="covid.html"><b><u>COVID-19</u></b></a>  -->
 					</ul>
 				</nav>
 				<nav class="nav-block side-navigation">
@@ -207,7 +217,8 @@
 	</aside>
 	<div class="wrapper reveal-side-navigation">
 		<div class="wrapper-inner">
-			<header class="header header-relative header-fixed-on-mobile nav-dark" data-bkg-threshold="100" data-sticky-threshold="0">
+			<header class="header header-relative header-fixed-on-mobile nav-dark" data-bkg-threshold="100"
+				data-sticky-threshold="0">
 				<div class="header-inner">
 					<div class="row nav-bar">
 						<div class="nav-bar-inner">
@@ -227,28 +238,38 @@
 							</nav>
 							<nav class="navigation nav-block primary-navigation nav-right">
 								<ul>
-									<li class=""> <a href="index.html#overviews">Overview</a></li>
-									<li class="contains-sub-menu"> <a href="index.html#locations">Locations</a>
+									<!-- <li class=""> <a href="index.html#overviews">Overview</a></li> -->
+									<li>
+										<a style='pointer-events: none;'>Locations</a>
 										<ul class="sub-menu">
-											<li><a href="#">BGC<span class="icon-right"></span></a>
+											<li><a style='pointer-events: none;'>BGC<span class="icon-right"></span></a>
 												<ul class="sub-menu">
 													<li><a href="visit/bonifacio-point.html">Bonifacio Point<br><sub>10
-																min walk to JPMorgan BGC</sub></a></li>
+																min walk to JPMorgan
+																BGC</sub></a></li>
 													<li><a href="visit/ricarte-bgc.html">Ricarte BGC<br><sub>5 min walk
-																to Grand Hyatt BGC</sub></a></li>
+																to Grand Hyatt
+																BGC</sub></a></li>
 													<li><a href="visit/luna-bgc.html">Luna BGC<br><sub>5 min walk to
-																Grand Hyatt BGC</sub></a></li>
+																Grand Hyatt BGC</sub></a>
+													</li>
 													<li><a href="visit/quezon-street-bgc.html">Quezon BGC<br><sub>5 min
-																walk to Uptown BGC</sub></a></li>
+																walk to Uptown
+																BGC</sub></a></li>
 												</ul>
 											</li>
 											<li>
-												<a href="#">Makati<span class="icon-right"></span></a>
+												<a style='pointer-events: none;'>Makati<span
+														class="icon-right"></span></a>
 												<ul class="sub-menu">
 													<li><a href="visit/estrella-makati.html">Estrella Makati<br><sub>10
-																min walk to Ayala/Buendia</sub></a></li>
+																min walk to
+																Ayala/Buendia</sub></a></li>
 													<li><a href="visit/teka-makati.html">Teka Makati<br><sub>10 min walk
-																to Ayala/Buendia</sub></a></li>
+																to
+																Ayala/Buendia</sub></a></li>
+
+
 												</ul>
 											</li>
 										</ul>
@@ -256,20 +277,25 @@
 									<li class=""> <a href="index.html#design">Design &amp; Inclusions</a></li>
 									<li class=""> <a href="index.html#fees">Monthly Fees</a></li>
 									<li class=""> <a href="projects.html">Projects</a></li>
-									<li class=""> <a href="faq.html">FAQ</a></li>
-									<li class=><a href=""><b><u></u>Get Started</u></b></a>
+									<li>
+										<a href="#" class="scroll-link contains-sub-menu">FAQ</a>
+										<ul class="sub-menu">
+											<li><a href="faq.html">Frequest Questions</a></li>
+
+											<li><a href="covid.html">COVID-19 Protocols</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="scroll-link contains-sub-menu"><b><u></u>Get
+												Started</u></b></a>
 										<ul class="sub-menu">
 											<li><a href="contact_us.html">Contact Us</a></li>
 
 											<li><a href="schedule_visit.html">Schedule a Visit</a></li>
 										</ul>
 									</li>
-									<li class=current>
-										<p
-											class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
-											<a href="virtual-tours.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a></p>
-									<li class=current><a href="covid.html"><b><u>COVID-19</u></b></a>
-								</ul>
+									<!-- <li class=current><a href="virtual-tours.html"><b><u>Virtual Tour</u></b><b><font color="#FFC632">(NEW!)</font></b></a> -->
+									<!-- <li class=current><a href="covid.html"><b><u>COVID-19</u></b></a>  -->
 								</ul>
 							</nav>
 						</div>
@@ -316,7 +342,7 @@
 						</div>
 						<div class="column width-8 left">
 							<div class="contact-form-container">
-								<form  onSubmit="uploadData();	return false; ">
+								<form onSubmit="uploadData();	return false; ">
 									<div class="row">
 										<div class="column width-8">
 											<div class="field-wrapper">
@@ -336,31 +362,40 @@
 									<div class="row">
 										<div class="column width-8">
 											<div class="field-wrapper">
-												<input type="number" id="mobile_number" name="mobile_number" class="form-wesite form-element rounded medium" placeholder="Mobile Number" tabindex="3" required>
+												<input type="number" id="mobile_number" name="mobile_number"
+													class="form-wesite form-element rounded medium"
+													placeholder="Mobile Number" tabindex="3" required>
 											</div>
 										</div>
 									</div>
 									<div class="row">
 										<div class="column width-12">
 											<div class="field-wrapper">
-												<textarea  id="inquiry" name="inquiry" class="form-wesite form-element rounded medium" placeholder="Inquiry/Messages" tabindex="4" required></textarea>
-										
+												<textarea id="inquiry" name="inquiry"
+													class="form-wesite form-element rounded medium"
+													placeholder="Inquiry/Messages" tabindex="4" required></textarea>
+
 											</div>
 										</div>
 									</div>
-									
+
 									<div class="row">
 										<div class="column width-12">
 											<div class="field-wrapper pt-10 pb-10 center form-check ">
-												<input type='checkbox' id='checkbox_1' class='rounded medium checkbox' required>
-												<label for="checkbox_1" class="checkbox-label ">Confirm here to agree with <a href="privacy-policy.html"  target='_blank' style='color:#195e83;'><b>Terms and Conditions</b></a> of our Company</label>
+												<input type='checkbox' id='checkbox_1' class='rounded medium checkbox'
+													required>
+												<label for="checkbox_1" class="checkbox-label ">Confirm here to agree
+													with <a href="privacy-policy.html" target='_blank'
+														style='color:#195e83;'><b>Terms and Conditions</b></a> of our
+													Company</label>
 											</div>
 										</div>
 									</div>
 									<div class="row">
 										<div class="column width-12 center">
 											<button id="submit-1" type="submit" value="Schedule a Visit"
-												class="rounded medium bkg-hover-theme button color-hover-white color-white " style='background-color:#f4b65b ;'><b>Contact Us</b></button>
+												class="rounded medium bkg-hover-theme button color-hover-white color-white "
+												style='background-color:#f4b65b ;'><b>Contact Us</b></button>
 										</div>
 									</div>
 								</form>
@@ -374,30 +409,41 @@
 				</div>
 			</div>
 			<div id="success" class="w3-modal " style='color:black'>
-			  <div class="w3-modal-content" style='width:600px;'>
-				<header style='background-color:#444c74;padding:10px;' class="w3-container " >
-					<a href='#'> <span onclick="document.getElementById('success').style.display='none'" class=" w3-display-topright" style='padding:0px;color:white;margin:0px;background-color:transparent;margin:5px;'><h5 style='color:white;'>X</h5></span></a>
-				  <h5 style='color:white;margin:0px;'>Point Blue Team</h5>
-				</header>
-				<div class="w3-container" style='font-family: Arial, sans-serif;'>
-				  <p><h2>Thank you!</h2></p><br>
-				  <p>Your inquiry has been sent. Please give us time to check on it and our representative will contact you soon.</p>
-				  <p>For the meantime, would you like:</p>
-				  <div class="row">
-					<div class="column width-12 center">
-						<a href='' target='_blank' id='link_visit' type="submit" value="Schedule a Visit" class="rounded medium bkg-hover-theme button color-hover-white color-white other-buttons"><b>Schedule a Visit </b></a>
+				<div class="w3-modal-content" style='width:600px;'>
+					<header style='background-color:#444c74;padding:10px;' class="w3-container ">
+						<a href='#'> <span onclick="document.getElementById('success').style.display='none'"
+								class=" w3-display-topright"
+								style='padding:0px;color:white;margin:0px;background-color:transparent;margin:5px;'>
+								<h5 style='color:white;'>X</h5>
+							</span></a>
+						<h5 style='color:white;margin:0px;'>Point Blue Team</h5>
+					</header>
+					<div class="w3-container" style='font-family: Arial, sans-serif;'>
+						<p>
+						<h2>Thank you!</h2>
+						</p><br>
+						<p>Your inquiry has been sent. Please give us time to check on it and our representative will
+							contact you soon.</p>
+						<p>For the meantime, would you like:</p>
+						<div class="row">
+							<div class="column width-12 center">
+								<a href='' target='_blank' id='link_visit' type="submit" value="Schedule a Visit"
+									class="rounded medium bkg-hover-theme button color-hover-white color-white other-buttons"><b>Schedule
+										a Visit </b></a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="column width-12 center">
+								<a href='https://script.google.com/macros/s/AKfycbwuPcpJbZ-v7NS6eILDi0ngxR411BWyooFhswEJXFWVV2t3v7I/exec'
+									target='_blank' type="submit"
+									class="rounded medium bkg-hover-theme button color-hover-white color-white other-buttons"><b>Apply
+										for a Unit
+									</b></a>
+							</div>
+						</div>
 					</div>
+
 				</div>
-				<div class="row">
-					<div class="column width-12 center">
-						<a href='https://script.google.com/macros/s/AKfycbwuPcpJbZ-v7NS6eILDi0ngxR411BWyooFhswEJXFWVV2t3v7I/exec' target='_blank'  type="submit" value="Schedule a Visit"
-							class="rounded medium bkg-hover-theme button color-hover-white color-white other-buttons"><b>Apply for a Unit
-								</b></a>
-					</div>
-				</div>
-				</div>
-				
-			  </div>
 			</div>
 			<footer class="footer footer-light border-top">
 				<div class="footer-top">
@@ -422,19 +468,37 @@
 									<div class=widget>
 										<h3 class="mb-30 widget-title">Company</h3>
 										<ul>
-											<li><a href=index.html#overview>About</a>
-											<li><a href=index.html#fees>Terms</a>
-											<li><a href=privacy-policy.html>Privacy Policy</a>
-											<li><a href=https://www.facebook.com/pointblueph><span class="icon-facebook small" hidden><span class="font-sample-xs">
-															Point Blue</span></span></a>
-											<li><a href=https://www.instagram.com/pointblueph><span
-														class="icon-instagram small"><span class="font-sample-xs">
-															pointblueph</span></span></a>
-											<li><a href="tel:+639171332583"><span class="icon-mobile small"><span
-															class="font-sample-xs">0917 133 2583</span></span></a>
-											<li><a href="mailto:info@pointblue.ph"><span
-														class="icon-mail-with-circle small"><span
-															class="font-sample-xs"> info@pointblue.ph</span></span></a>
+											<li><a href=index.html#overview>About</a> </li>
+											<li><a href=index.html#fees>Terms</a></li>
+											<li><a href=privacy-policy.html>Privacy Policy</a></li>
+											<li>
+												<a href=https://www.facebook.com/pointblueph>
+													<span class='small facebook-icon'>
+														<span class="font-sample-xs"> Point Blue</span>
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="https://www.instagram.com/pointblueph" target="_blank">
+													<span class="small ig-icon">
+														<span class="font-sample-xs"> pointblueph </span>
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="tel:+639171332583">
+													<span class="icon-mobile small"><span class="font-sample-xs">
+															0917 133 2583</span>
+													</span>
+												</a>
+											</li>
+											<li>
+												<a href="mailto:info@pointblue.ph">
+													<span class="small email-icon"">
+														<span class=" font-sample-xs"> info@pointblue.ph
+													</span>
+												</a>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -445,7 +509,7 @@
 								<hr class="mb-10 mb-mobile-30">
 							</div>
 							<div class="column width-6">
-								<p class="copyright pull-left clear-float-on-mobile">78 Point Blue (C) 2018</p>
+								<p class="copyright pull-left clear-float-on-mobile">78 Point Blue &copy; <span id='year'></span></p>
 							</div>
 							<div class="column width-6">
 								<p class="copyright pull-right clear-float-on-mobile">Building and view not to scale</p>
@@ -456,34 +520,36 @@
 		</div>
 	</div>
 	<script>
-		
+		var d = new Date();
+		var y = d.getFullYear();
+		document.getElementById("year").innerHTML = y;
 		function uploadData() {
-	
+
 			var url_origin = window.location.href;
 			var name = document.getElementById("name").value;
 			var email = document.getElementById("email").value;
 			var mobile_number = document.getElementById("mobile_number").value;
 			var inquiry = document.getElementById("inquiry").value;
 			var url_origin = url_origin;
-			var link = "https://script.google.com/macros/s/AKfycbwTNwRuaDZUDwGakONXNRGR5r1uBS_YygXa3EIw_Xt2V2DCrp_8-EGMQQ/exec?name="+name+"&contact_number="+mobile_number+"&email="+email+"&inquiry="+inquiry+"&url_origin="+url_origin;
-			
-			fetch(link).then(res => res.json())
-		.then((data) => {
-			document.getElementById("myDiv").style.display="block";
-		 // console.log(data.results[0]);
-		 document.getElementById('success').style.display='block';
-		 document.getElementById("myDiv").style.display="none";
-		console.log(data);
+			var link = "https://script.google.com/macros/s/AKfycbwTNwRuaDZUDwGakONXNRGR5r1uBS_YygXa3EIw_Xt2V2DCrp_8-EGMQQ/exec?name=" + name + "&contact_number=" + mobile_number + "&email=" + email + "&inquiry=" + inquiry + "&url_origin=" + url_origin;
 
-		document.getElementById("link_visit").href="schedule_visit.html?name="+data.name+"&email="+data.email+"&contact_number="+data.contact_number;
-		document.getElementById("name").value = "";
-		document.getElementById("email").value = "";
-		document.getElementById("mobile_number").value = "";
-		document.getElementById("inquiry").value = "";
-		  
-		})
-		.catch(err => { throw err });
-		document.getElementById("myDiv").style.display="block";
+			fetch(link).then(res => res.json())
+				.then((data) => {
+					document.getElementById("myDiv").style.display = "block";
+					// console.log(data.results[0]);
+					document.getElementById('success').style.display = 'block';
+					document.getElementById("myDiv").style.display = "none";
+					console.log(data);
+
+					document.getElementById("link_visit").href = "schedule_visit.html?name=" + data.name + "&email=" + data.email + "&contact_number=" + data.contact_number;
+					document.getElementById("name").value = "";
+					document.getElementById("email").value = "";
+					document.getElementById("mobile_number").value = "";
+					document.getElementById("inquiry").value = "";
+
+				})
+				.catch(err => { throw err });
+			document.getElementById("myDiv").style.display = "block";
 			console.log(link);
 			return false;
 		}
@@ -492,27 +558,25 @@
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script> -->
 	<!-- <script src="js/timber.master.min.js"></script> -->
 	<div id="fb-root"></div>
-     <script>
-       window.fbAsyncInit = function() {
-         FB.init({
-           xfbml            : true,
-           version          : 'v9.0'
-         });
-       };
+	<script>
+		window.fbAsyncInit = function () {
+			FB.init({
+				xfbml: true,
+				version: 'v9.0'
+			});
+		};
 
-       (function(d, s, id) {
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) return;
-       js = d.createElement(s); js.id = id;
-       js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));</script>
+		(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
-     <!-- Your Chat Plugin code -->
-     <div class="fb-customerchat"
-       attribution=setup_tool
-       page_id="463900637331486">
-     </div>
+	<!-- Your Chat Plugin code -->
+	<div class="fb-customerchat" attribution=setup_tool page_id="463900637331486">
+	</div>
 </body>
 
 </html>

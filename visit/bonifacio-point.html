@@ -39,11 +39,9 @@
   <meta charset=UTF-8>
   <meta content="width=device-width,initial-scale=1,maximum-scale=1" name=viewport>
   <meta
-		content="Point Blue | Bonifacio Point | Studio for Rent BGC | 2063 Nuestra Senora de Guadalupe, Makati City, Philippines | Send us a message or Schedule a Visit"
+    content="Point Blue | Bonifacio Point | Studio for Rent BGC | 2063 Nuestra Senora de Guadalupe, Makati City, Philippines | Send us a message or Schedule a Visit"
     name=description itemprop=description>
-  <meta
-		content="Point Blue, studio for rent bgc"
-    name=keywords itemprop=keywords>
+  <meta content="Point Blue, studio for rent bgc" name=keywords itemprop=keywords>
   <meta content="Paolo Ernesto Uy" name=author>
   <meta content="Point Blue · Integrated Microstudios" property=og:title>
   <meta content=http://www.pointblue.ph property=og:url>
@@ -53,14 +51,15 @@
     content="Furnished living spaces with WiFi just a 15-minute walk to BGC renting from P13,200 to max P15,000 monthly. Absolutely no hidden charges!"
     property=og:description>
   <meta content=light name=twitter:widgets:theme>
-		<title>Point Blue | Bonifacio Point | Studio for Rent BGC | Philippines</title>
+  <title>Point Blue | Bonifacio Point | Studio for Rent BGC | Philippines</title>
   <link href=../images/point-blue-favicon.ico rel="shortcut icon" type=image/x-icon>
   <link
     href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Roboto:300,400,500,700%7CHind+Madurai:400,500&subset=latin-ext"
     rel=stylesheet>
   <link href=../css/core.min.css rel=stylesheet>
   <link href=../css/skin.min.css rel=stylesheet>
-  <link href=../css/custom.css rel=stylesheet>
+  <!-- <link href=../css/custom.css rel=stylesheet> -->
+  <link href=../css/style.css rel=stylesheet>
   <meta name="google-site-verification" content="e2pDSg7Rkaiik3r1bM2HfR1kzZ9udzcdhVU0c-9SCPA" />
   <!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
 
@@ -83,15 +82,15 @@
         </div>
         <nav class="nav-block side-navigation">
           <ul>
-            <li class=current><a href=../index.html#overview>Overview</a>
+            <!-- <li class=current><a href=../index.html#overview>Overview</a> -->
             <li><a href="../projects.html" class="scroll-link contains-sub-menu">Locations</a>
               <ul class=sub-menu>
-               <li><a href="bonifacio-point.html">Bonifacio Point<br><sub>10 min walk to JPMorgan BGC</a>
-                  <li><a href="ricarte-bgc.html">Ricarte BGC<br><sub>5 min walk to Grand Hyatt BGC</a>
-                  <li><a href="teka-makati.html">Teka Makati<br><sub>10 min walk to Ayala/Buendia</sub></a>
-                  <li><a href="estrella-makati.html">Estrella Makati<br><sub>10 min walk to Ayala/Buendia</sub></a>
-                  <li><a href="quezon-street-bgc.html">Quezon BGC<br><sub>5 min walk to Uptown BGC</sub></a>
-                  <li><a href="luna-bgc.html">Luna BGC<br><sub>5 min walk to Grand Hyatt BGC</sub></a>
+                <li><a href="bonifacio-point.html">Bonifacio Point<br><sub>10 min walk to JPMorgan BGC</a>
+                <li><a href="ricarte-bgc.html">Ricarte BGC<br><sub>5 min walk to Grand Hyatt BGC</a>
+                <li><a href="teka-makati.html">Teka Makati<br><sub>10 min walk to Ayala/Buendia</sub></a>
+                <li><a href="estrella-makati.html">Estrella Makati<br><sub>10 min walk to Ayala/Buendia</sub></a>
+                <li><a href="quezon-street-bgc.html">Quezon BGC<br><sub>5 min walk to Uptown BGC</sub></a>
+                <li><a href="luna-bgc.html">Luna BGC<br><sub>5 min walk to Grand Hyatt BGC</sub></a>
 
 
 
@@ -100,18 +99,19 @@
             <li><a href=../index.html#fees>Monthly Fees</a>
             <li><a href="../projects.html">Upcoming Projects</a>
             <li><a href="../faq.html">FAQ</a>
-              <li class=><a href=""><b><u></u>Get Started</u></b></a>
-                <ul class="sub-menu">
-                  <li><a href="contact_us.html">Contact Us</a></li>
+            <li class=><a href=""><b><u></u>Get Started</u></b></a>
+              <ul class="sub-menu">
+                <li><a href="contact_us.html">Contact Us</a></li>
 
-                  <li><a href="schedule_visit.html">Schedule a Visit</a></li>
-                </ul>
-              </li>
-              <li class=current>
-                <p
-                  class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
-                  <a href="virtual-tours.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a></p>
-              <li class=current><a href="covid.html"><b><u>COVID-19</u></b></a>
+                <li><a href="schedule_visit.html">Schedule a Visit</a></li>
+              </ul>
+            </li>
+            <li class=current>
+              <p
+                class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
+                <a href="virtual-tours.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a>
+              </p>
+            <li class=current><a href="covid.html"><b><u>COVID-19</u></b></a>
           </ul>
         </nav>
 
@@ -163,43 +163,64 @@
                 <ul>
 
                   <li>
-                    <a>Locations</a>
+										<a style='pointer-events: none;'>Locations</a>
+										<ul class="sub-menu">
+											<li><a style='pointer-events: none;'>BGC<span class="icon-right"></span></a>
+												<ul class="sub-menu">
+													<li><a href="bonifacio-point.html">Bonifacio Point<br><sub>10
+																min walk to JPMorgan
+																BGC</sub></a></li>
+													<li><a href="ricarte-bgc.html">Ricarte BGC<br><sub>5 min walk
+																to Grand Hyatt
+																BGC</sub></a></li>
+													<li><a href="luna-bgc.html">Luna BGC<br><sub>5 min walk to
+																Grand Hyatt BGC</sub></a>
+													</li>
+													<li><a href="quezon-street-bgc.html">Quezon BGC<br><sub>5 min
+																walk to Uptown
+																BGC</sub></a></li>
+												</ul>
+											</li>
+											<li>
+												<a style='pointer-events: none;'>Makati<span
+														class="icon-right"></span></a>
+												<ul class="sub-menu">
+													<li><a href="estrella-makati.html">Estrella Makati<br><sub>10
+																min walk to
+																Ayala/Buendia</sub></a></li>
+													<li><a href="teka-makati.html">Teka Makati<br><sub>10 min walk
+																to
+																Ayala/Buendia</sub></a></li>
+
+
+												</ul>
+											</li>
+										</ul>
+									</li>
+                  <li><a href=#design class=scroll-link>Design & Inclusions</a></li>
+                  <li><a href=#fees class=scroll-link>Monthly Fees</a></li>
+                  <li><a href="../projects.html">Upcoming Projects</a></li>
+                  <li>
+										<a href="#" class="scroll-link contains-sub-menu">FAQ</a>
+										<ul class="sub-menu">
+											<li><a href="../faq.html">Frequest Questions</a></li>
+
+											<li><a href="../covid.html">COVID-19 Protocols</a></li>
+										</ul>
+									</li>
+                  <li class=><a href=""><b><u></u>Get Started</u></b></a>
                     <ul class="sub-menu">
-                        <li><a href="#">BGC<span class="icon-right"></span></a>
-                          <ul class="sub-menu">
-                            <li><a href="bonifacio-point.html">Bonifacio Point<br><sub>10 min walk to JPMorgan BGC</sub></a></li>
-                            <li><a href="ricarte-bgc.html">Ricarte BGC<br><sub>5 min walk to Grand Hyatt BGC</sub></a></li>
-                            <li><a href="luna-bgc.html">Luna BGC<br><sub>5 min walk to Grand Hyatt BGC</sub></a></li>
-                            <li><a href="quezon-street-bgc.html">Quezon BGC<br><sub>5 min walk to Uptown BGC</sub></a></li>
-                          </ul></li>
-                        <li>
-                          <a href="#">Makati<span class="icon-right"></span></a>
-                          <ul class="sub-menu">
-                            <li><a href="estrella-makati.html">Estrella Makati<br><sub>10 min walk to Ayala/Buendia</sub></a></li>
-                            <li><a href="teka-makati.html">Teka Makati<br><sub>10 min walk to Ayala/Buendia</sub></a></li>
+                      <li><a href="../contact_us.html">Contact Us</a></li>
 
-
-                        </ul>
-                      </li>
+                      <li><a href="../schedule_visit.html">Schedule a Visit</a></li>
                     </ul>
                   </li>
-
-                  <li><a href=#design class=scroll-link>Design & Inclusions</a>
-                  <li><a href=#fees class=scroll-link>Monthly Fees</a>
-                  <li><a href="../projects.html">Upcoming Projects</a>
-                  <li><a href="../faq.html">FAQ</a>
-                    <li class=><a href=""><b><u></u>Get Started</u></b></a>
-                      <ul class="sub-menu">
-                        <li><a href="../contact_us.html">Contact Us</a></li>
-  
-                        <li><a href="../schedule_visit.html">Schedule a Visit</a></li>
-                      </ul>
-                    </li>
-                    <li class=current>
-                      <p
-                        class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
-                        <a href="../contact_us.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a></p>
-                    <li class=current><a href="../covid.html"><b><u>COVID-19</u></b></a>
+                  <!-- <li class=current>
+                    <p
+                      class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
+                      <a href="../contact_us.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a>
+                    </p>
+                  <li class=current><a href="../covid.html"><b><u>COVID-19</u></b></a> -->
                 </ul>
               </nav>
             </div>
@@ -220,7 +241,7 @@
           <p class=lead style="padding-left:30px!important">2063 Nuestra Senora de Guadalupe, Makati City </p>
 
           <div class="location-description" style="padding-left:30px!important">
-              <i>Starts at Php 13,900</i></p>
+            <i>Starts at Php 13,900</i></p>
             <div class="row">
               <div class="column width-6">
                 <p><strong>Inclusions:</strong><br>
@@ -254,7 +275,7 @@
                   class="lightbox-link" data-content=iframe data-modal-mode="" data-toolbar="">
                   <button class="small other-buttons button color-white"><b>Vicinity Map</b></button>
                 </a>
-                <a href="../schedule_visit.html"  target='_blank'>
+                <a href="../schedule_visit.html" target='_blank'>
                   <button class="small other-buttons button color-white"><b>Schedule a Visit</b></button>
                 </a>
                 <a href="../virtual-tours.html"><button class="small other-buttons button color-white"><b>Take a
@@ -289,61 +310,18 @@
               data-nav-dark>
               <div class="width-12 media-column"></div>
               <img alt="" data-src=../images/landingpictures/BPO/3.png>
-
-
           </ul>
         </div>
       </div>
-
-
-
     </div>
-
-
-
-
-
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <footer class="border-top footer footer-light">
     <div class="footer-top">
       <div class="row flex">
         <div class="column width-5">
           <div class=widget>
             <div class=signup-form-container>
-
               <div class=row>
-
-
               </div>
               <input class="rounded medium form-element form-honeypot" name=honeypot>
               </form>
@@ -367,17 +345,37 @@
               <div class=widget>
                 <h3 class="mb-30 widget-title">Company</h3>
                 <ul>
-                  <li><a href="../index.html#overview" class="scroll-link">About</a>
-                  <li><a href="../index.html#fees" class="scroll-link">Terms</a>
-                  <li><a href=../privacy-policy.html>Privacy Policy</a>
-                  <li><a href=https://www.facebook.com/pointblueph><span class="icon-facebook small" hidden><span
-                          class="font-sample-xs"> Point Blue</span></span></a>
-                  <li><a href=https://www.instagram.com/pointblueph><span class="icon-instagram small"><span
-                          class="font-sample-xs"> pointblueph</span></span></a>
-                  <li><a href="tel:+639171332583"><span class="icon-mobile small"><span class="font-sample-xs">0917 133
-                          2583</span></span></a>
-                  <li><a href="mailto:info@pointblue.ph"><span class="icon-mail-with-circle small"><span
-                          class="font-sample-xs"> info@pointblue.ph</span></span></a>
+                  <li><a href="../index.html#overview" class="scroll-link">About</a></li>
+                  <li><a href="../index.html#fees" class="scroll-link">Terms</a></li>
+                  <li><a href=../privacy-policy.html>Privacy Policy</a></li>
+                    <li>
+                      <a href=https://www.facebook.com/pointblueph>
+                        <span class='small facebook-icon'>
+                          <span class="font-sample-xs"> Point Blue</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/pointblueph" target="_blank">
+                        <span class="small ig-icon">
+                          <span class="font-sample-xs"> pointblueph </span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="tel:+639171332583">
+                        <span class="icon-mobile small"><span class="font-sample-xs">
+                            0917 133 2583</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:info@pointblue.ph">
+                        <span class="small email-icon"">
+                          <span class=" font-sample-xs"> info@pointblue.ph
+                        </span>
+                      </a>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -389,7 +387,7 @@
           <hr class="mb-10 mb-mobile-30">
         </div>
         <div class="column width-6">
-          <p class="copyright clear-float-on-mobile pull-left">Point Blue © 2018
+          <p class="copyright clear-float-on-mobile pull-left">Point Blue &copy; 2018
         </div>
         <div class="column width-6">
           <p class="copyright clear-float-on-mobile pull-right">Building and view not to scale.
@@ -401,34 +399,32 @@
   </div>
   <script src=../js/jquery-3.2.1.min.js></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+  <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
 
-  </script>
+  </script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src=../js/jquery.tm.avalanche.js></script>
   <script src=../js/timber.master.min.js></script>
   <div id="fb-root"></div>
-     <script>
-       window.fbAsyncInit = function() {
-         FB.init({
-           xfbml            : true,
-           version          : 'v9.0'
-         });
-       };
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v9.0'
+      });
+    };
 
-       (function(d, s, id) {
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) return;
-       js = d.createElement(s); js.id = id;
-       js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));</script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
-     <!-- Your Chat Plugin code -->
-     <div class="fb-customerchat"
-       attribution=setup_tool
-       page_id="463900637331486">
-     </div>
-  </body>
-  </html>
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat" attribution=setup_tool page_id="463900637331486">
+  </div>
+</body>
 
+</html>

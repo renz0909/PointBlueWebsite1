@@ -1,0 +1,61 @@
+.facebook-icon {
+    width: 100px;
+    display: block;
+    height: 20px;
+    text-decoration: none;
+    padding-left: 15px;
+    margin: 5px;
+  }
+
+  .facebook-icon:before {
+    content: '';
+    background: url('https://drive.google.com/uc?export=view&id=1pgEleudexmvv-2JtMqC2CPtCuzizdiqi');
+    background-size: cover;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: -20px;
+    margin-top: 3px;
+  }
+
+  .ig-icon {
+    width: 100px;
+    display: block;
+    height: 20px;
+    text-decoration: none;
+    padding-left: 15px;
+    margin: 5px;
+  }
+
+  .ig-icon:before {
+    content: '';
+    background: url('https://drive.google.com/uc?export=view&id=1y09f2dRYecX5POCJGgxvSch7nVYjBcNg');
+    background-size: cover;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: -20px;
+    margin-top: 3px;
+  }
+
+  .email-icon {
+    width: 100px;
+    display: block;
+    height: 20px;
+    text-decoration: none;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-top:-2px;
+  }
+
+  .email-icon:before {
+    content: '';
+    background: url('https://drive.google.com/uc?export=view&id=1_jgMYVMHEpZ1LTw1J7AvrWlV3TOvhho9');
+    background-size: cover;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: -20px;
+    margin-top: 3px;
+  }
+ 

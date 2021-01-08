@@ -2404,7 +2404,7 @@ textarea.rounded {
 
 @media only screen and (min-width:768px) {
     .merged-form-elements .column+.column:not(: last-child), .merged-form-elements .column:first-child {
-        padding-right: 0
+        padding-right: 0;
     }
     .merged-form-elements .column+.column .button,
     .merged-form-elements .column+.column .form-element {
@@ -15923,4 +15923,5 @@ body.boxed .blog-masonry.full-width [class*=content-grid] {
     [class*=pd-] {
         top: 0
     }
+
 }
