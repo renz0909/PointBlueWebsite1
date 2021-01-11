@@ -58,7 +58,25 @@
     margin-left: -20px;
     margin-top: 3px;
   }
- .sub-delay
- {
-  animation-delay: 5s;
- }
+
+  .phone-icon {
+    width: 100px;
+    display: block;
+    height: 20px;
+    text-decoration: none;
+    padding-left: 15px;
+    margin-left: 5px;
+    margin-top:-2px;
+  }
+
+  .phone-icon:before {
+    content: '';
+    background: url('https://drive.google.com/uc?export=view&id=1NkQyeolWTO7h-Fe6lTMV0cYD2aNcOLV_');
+    background-size: cover;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: -20px;
+    margin-top: 3px;
+  }
+ 

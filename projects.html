@@ -264,14 +264,12 @@
                                 <div class="hero-content split-hero-content">
                                     <div class="horizon hero-content-inner center"
                                         data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
-                                        <h2 class="mb-20">Quezon</h2>
-                                        <p class="lead font-alt-2 ">6070 Quezon St, South Cembo, Makati City
-                                        <p class="lead font-alt-2 ">Nearest Landmarks:
-                                        <p>Bonifacio High Street
-                                            <br>Kalayaan Ave.
-                                            <br>Uptown Mall
-                                            <br>
-                                            <br><b>Operational as of February 2020</b>
+                                        <h2 class="mb-20">Ramos</h2>
+                                        <p class="lead font-alt-2 ">6518 E. Ramos St. Pio del Pilar, Makati City</p>
+                                       
+                                          <p> Completion <b> 1st quarter of 2021</b>
+                                            </p>
+
 
                                     </div>
                                 </div>
@@ -284,21 +282,15 @@
                 </section>
 
                 <section>
-                    <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10"
-                        id="genluna">
+                    <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10" id="genluna">
                         <div class="row">
                             <div class="column width-6">
                                 <div class="hero-content split-hero-content">
                                     <div class="horizon hero-content-inner center"
                                         data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
-                                        <h2 class="mb-20">General Luna</h2>
-                                        <p class="lead font-alt-2 ">1100 General Luna St, South Cembo, Makati City
-                                        <p class="lead font-alt-2 ">Nearest Landmarks:
-                                        <p>JPMorgan Chase Building
-                                            <br>Kalayaan Ave.
-                                            <br>St. Luke's Medical Center
-                                            <br>
-                                            <br><b>Completion 4Q 2019</b>
+                                        <h2 class="mb-20">Mola</h2>
+                                        <p class="lead font-alt-2 ">3484 Mola St. Brgy. La Paz, Makati City</p>
+                                        <p><b>Completion 2nd quarter of 2021</b></p>
 
                                     </div>
                                 </div>
@@ -310,6 +302,26 @@
                     </div>
                 </section>
 
+                <section>
+                    <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10" id="genluna">
+                        <div class="row">
+                            <div class="column width-6">
+                                <div class="hero-content split-hero-content">
+                                    <div class="horizon hero-content-inner center"
+                                        data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
+                                        <h2 class="mb-20">Pertierra</h2>
+                                        <p class="lead font-alt-2 ">2903 Pertierra cor A.Mabini St. Brgy Poblacion Makati City</p>
+                                        <p><b>Completion 3rd quarter of 2021</b></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column width-6">
+                                <div id="mapF" style="height:375px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <script>
                     function myMap() {
                         var iconbase = 'images/assets/map-marker-mini.png';
@@ -322,8 +334,8 @@
                             scrollwheel: false
                         };
 
-                        var latD = 14.560912;
-                        var lngD = 121.051720;
+                        var latD = 14.55285;
+                        var lngD = 121.01143;
                         var mapCanvasD = document.getElementById("mapD");
                         var mapOptionsD = {
                             center: new google.maps.LatLng(latD, lngD),
@@ -336,8 +348,8 @@
                             map: mapD,
                         });
 
-                        var latE = 14.557593;
-                        var lngE = 121.048434;
+                        var latE = 14.56766;
+                        var lngE = 121.01308;
                         var mapCanvasE = document.getElementById("mapE");
                         var mapOptionsE = {
                             center: new google.maps.LatLng(latE, lngE),
@@ -348,6 +360,21 @@
                         var markerE = new google.maps.Marker({
                             position: new google.maps.LatLng(latE, lngE),
                             map: mapE,
+                        });
+
+
+                        var latF = 14.56766;
+                        var lngF = 121.01308;
+                        var mapCanvasF = document.getElementById("mapF");
+                        var mapOptionsF = {
+                            center: new google.maps.LatLng(latF, lngF),
+                            zoom: 16,
+                            scrollwheel: false
+                        };
+                        var mapF = new google.maps.Map(mapCanvasF, mapOptionsF);
+                        var markerE = new google.maps.Marker({
+                            position: new google.maps.LatLng(latF, lngF),
+                            map: mapF,
                         });
                     }
                 </script>
@@ -394,12 +421,12 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="tel:+639171332583">
-                                                        <span class="icon-mobile small"><span class="font-sample-xs">
-                                                                0917 133 2583</span>
-                                                        </span>
+                                                    <a href="tel:+639171332583" target="_blank">
+                                                      <span class="small phone-icon">
+                                                        <span class="font-sample-xs">  0917 133 2583 </span>
+                                                      </span>
                                                     </a>
-                                                </li>
+                                                  </li>
                                                 <li>
                                                     <a href="mailto:info@pointblue.ph">
                                                         <span class="small email-icon"">
