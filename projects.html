@@ -52,8 +52,8 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700%7CMontserrat:400,700%7CPlayfair+Display:400,400italic"
         rel="stylesheet">
-    <link href="css/core.min.css" rel="stylesheet">
-    <link href="css/skin.css" rel="stylesheet">
+    <!-- <link href="css/core.min.css" rel="stylesheet">
+    <link href="css/skin.css" rel="stylesheet"> -->
     <html lang=zxx>
     <meta content="width=device-width,initial-scale=1,maximum-scale=1" name=viewport>
     <meta content="Paolo Ernesto Uy" name=author>
@@ -67,15 +67,75 @@
         rel=stylesheet>
     <link href=css/core.min.css rel=stylesheet>
     <link href=css/skin.min.css rel=stylesheet>
-    <link href=css/custom.css rel=stylesheet>
+    <!-- <link href=css/custom.css rel=stylesheet> -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <link href=css/style.css rel=stylesheet>
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<style>
+		.loader {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: rgb(249, 249, 249);
+			opacity: .8;
+			background-size: 200px 120px;
+		}
 
+		.loader-page {
+
+			position: absolute;
+			left: 50%;
+			top: 50vh;
+			z-index: 1;
+			border: 16px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 16px solid #192a48;
+			width: 120px;
+			height: 120px;
+			-webkit-animation: spin 2s linear infinite;
+			/* Safari */
+			animation: spin 2s linear infinite;
+			/* width: 100%;
+		height: 100%; */
+			z-index: 1;
+			/* background: url("loader.gif") 50% 50% no-repeat rgb(249, 249, 249); */
+			/* opacity: .8; */
+			/* background-size: 200px 120px; */
+
+		}
+
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
 
 </head>
 
 <body class="home-page shop">
+    <div id="myDiv" style="display:none;" class="loader">
+		<div class="loader-page">
+
+		</div>
+	</div>
     <aside class="enter-right side-navigation-wrapper" data-animation=scale-in data-no-scrollbar>
 		<div class=side-navigation-scroll-pane>
 			<div class=side-navigation-inner>
@@ -231,97 +291,115 @@
 					</div>
 				</div>
 			</header>
-            <div class="clearfix content">
-                <section class="section-block featured-media page-intro tm-slider-parallax-container" id="home">
-                    <div class="full-width-slider tm-slider-container" data-animation="slide" data-parallax
-                        data-scale-under="1140">
-                        <ul class="tms-slides">
-                            <li class="tms-slide" data-force-fit data-image data-overlay-bkg-color="#000000"
-                                data-overlay-bkg-opacity="0.1">
-                                <div class="tms-content">
-                                    <div class="left tms-content-inner">
-                                        <div class="row">
-                                            <div class="column width-12">
-                                                <h1 class="color-white font-alt-2 mb-0 title-xlarge tms-caption weight-light"
-                                                    data-animate-in="preset:scaleOut;duration:1000ms;" data-no-scale>
-                                                    More Projects</h1>
+            <div class="clearfix content" >
+             
+                    <section class="section-block featured-media page-intro tm-slider-parallax-container" id="home">
+                        <div class="full-width-slider tm-slider-container" data-animation="slide" data-parallax
+                            data-scale-under="1140">
+                            <ul class="tms-slides">
+                                <li class="tms-slide" data-force-fit data-image data-overlay-bkg-color="#000000"
+                                    data-overlay-bkg-opacity="0.1">
+                                    <div class="tms-content">
+                                        <div class="left tms-content-inner">
+                                            <div class="row">
+                                                <div class="column width-12">
+                                                    <h1 class="color-white font-alt-2 mb-0 title-xlarge tms-caption weight-light"
+                                                        data-animate-in="preset:scaleOut;duration:1000ms;" data-no-scale>
+                                                        More Projects</h1>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div> <img alt="" src="images/blank.png" data-retina
-                                    data-src="images/header/showcase.jpg">
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+                                    </div> <img alt="" src="" data-retina
+                                        data-src="images/header/showcase.jpg">
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <div id='section'>
 
-
-                <section>
-                    <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10"
-                        id="quezon">
-                        <div class="row">
-                            <div class="column width-6">
-                                <div class="hero-content split-hero-content">
-                                    <div class="horizon hero-content-inner center"
-                                        data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
-                                        <h2 class="mb-20">Ramos</h2>
-                                        <p class="lead font-alt-2 ">6518 E. Ramos St. Pio del Pilar, Makati City</p>
-                                       
-                                          <p> Completion <b> 1st quarter of 2021</b>
+                    <section>
+                        <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10"
+                            id="quezon">
+                            <div class="row">
+                                <div class="column width-6">
+                                    <div class="hero-content split-hero-content">
+                                        <div class="horizon hero-content-inner center"
+                                            data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
+                                            <h2 class="mb-20">Ramos</h2>
+                                            <p class="lead font-alt-2 ">6518 E. Ramos St. Pio del Pilar, Makati City</p>
+                                            <p class="lead font-alt-2 ">Nearest Landmarks:
+                                                <p>Ayala Ave
+                                                    <br>Buendia
+                                                </p>
                                             </p>
+                                            <p> Completion <b> 1st quarter of 2021</b>
+                                                </p>
 
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="column width-6">
-                                <div id="mapD" style="height:375px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10" id="genluna">
-                        <div class="row">
-                            <div class="column width-6">
-                                <div class="hero-content split-hero-content">
-                                    <div class="horizon hero-content-inner center"
-                                        data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
-                                        <h2 class="mb-20">Mola</h2>
-                                        <p class="lead font-alt-2 ">3484 Mola St. Brgy. La Paz, Makati City</p>
-                                        <p><b>Completion 2nd quarter of 2021</b></p>
-
-                                    </div>
+                                <div class="column width-6">
+                                    <div id="mapD" style="height:375px;"></div>
                                 </div>
                             </div>
-                            <div class="column width-6">
-                                <div id="mapE" style="height:375px;"></div>
-                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <section>
-                    <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10" id="genluna">
-                        <div class="row">
-                            <div class="column width-6">
-                                <div class="hero-content split-hero-content">
-                                    <div class="horizon hero-content-inner center"
-                                        data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
-                                        <h2 class="mb-20">Pertierra</h2>
-                                        <p class="lead font-alt-2 ">2903 Pertierra cor A.Mabini St. Brgy Poblacion Makati City</p>
-                                        <p><b>Completion 3rd quarter of 2021</b></p>
+                    <section>
+                        <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10" id="genluna">
+                            <div class="row">
+                                <div class="column width-6">
+                                    <div class="hero-content split-hero-content">
+                                        <div class="horizon hero-content-inner center"
+                                            data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
+                                            <h2 class="mb-20">Mola</h2>
+                                            <p class="lead font-alt-2 ">3484 Mola St. Brgy. La Paz, Makati City</p>
+                                         
+                                            <p class="lead font-alt-2 ">Nearest Landmarks:
+                                                <p>Ayala Ave
+                                                    <br>Buendia
+                                                    <br>Makati Medical Center
+                                                </p>
+                                            </p> 
+                                            <p>Completion <b>2nd quarter of 2021</b></p>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="column width-6">
-                                <div id="mapF" style="height:375px;"></div>
+                                <div class="column width-6">
+                                    <div id="mapE" style="height:375px;"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+
+                    <section>
+                        <div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10" id="genluna">
+                            <div class="row">
+                                <div class="column width-6">
+                                    <div class="hero-content split-hero-content">
+                                        <div class="horizon hero-content-inner center"
+                                            data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
+                                            <h2 class="mb-20">Pertierra</h2>
+                                            <p class="lead font-alt-2 ">2903 Pertierra cor A.Mabini St. Brgy Poblacion Makati City</p>
+                                            <p class="lead font-alt-2 ">Nearest Landmarks:
+                                                <p>Makati City Hall
+                                                    <br>Century City Mall
+                                                </p>
+                                            </p> 
+                                            <p><b>Completion 3rd quarter of 2021</b></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column width-6">
+                                    <div id="mapF" style="height:375px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
                 <script>
                     function myMap() {
                         var iconbase = 'images/assets/map-marker-mini.png';
@@ -372,12 +450,72 @@
                             scrollwheel: false
                         };
                         var mapF = new google.maps.Map(mapCanvasF, mapOptionsF);
-                        var markerE = new google.maps.Marker({
+                        var markerF = new google.maps.Marker({
                             position: new google.maps.LatLng(latF, lngF),
                             map: mapF,
                         });
                     }
                 </script>
+
+                <script>
+                    // document.getElementById("myDiv").style.display = "block";
+                    var link = "https://script.google.com/macros/s/AKfycbwrgC6dEMEfwwduss_L-qJcAHPliwsKFnnuKCbPbJCTk6jUeJxTxYz_LA/exec";
+
+                    fetch(link).then(res => res.json())
+                        .then((data) => {
+
+                        //     jQuery.each(data, function (id) {
+                        //     if (id != 0) {
+                        //         console.log(data[id][0] );
+                        //         var section = '<section>';
+                        //             section += '<div class="section-block clear-height hero-5 hero-5-about-5 right show-media-column-on-mobile pt-60 pb-10" id='+data[id][0]+' >';
+                        //             section += '<div class="row">';
+                        //             section += '<div class="column width-6">';
+                        //             section += '<div class="hero-content split-hero-content">';
+                        //             section += '<div class="horizon hero-content-inner center" data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">';
+                        //             section += '<h2 class="mb-20">'+data[id][0]+'</h2>';
+                        //             section += '<p class="lead font-alt-2 ">'+data[id][1]+'</p>';
+                        //             section += '<p><b>Completion '+data[id][3]+'</b></p>';  
+                        //             section += '</div>';
+                        //             section += '</div>';
+                        //             section += '</div>';
+                        //             section += '<div class="column width-6">';
+                        //             section += '<div id="map_'+id+'" style="height:375px;"></div>';
+                        //             section += '</div>';
+                        //             section += '</div>';
+                        //             section += '</div>';
+                        //             section += '</section>';
+                          
+                        //         $('#section').append(section);
+                              
+                        //         var iconbase = 'images/assets/map-marker-mini.png';
+                        //         var lat = data[id][7];
+                        //         var lng = data[id][6];
+                        //         // alert(lng);
+                        //         var mapCanvas = document.getElementById("map_"+id);
+                        //         var mapOptions = {
+                        //             center: new google.maps.LatLng(lat, lat),
+                        //             zoom: 16,
+                        //             scrollwheel: false
+                        //         };
+                        //         var map = new google.maps.Map(mapCanvas, mapOptions);
+                        //         var marker = new google.maps.Marker({
+                        //             position: new google.maps.LatLng(lat, lng),
+                        //             map: map,
+                        //         });
+                        //              var init_js = 'js/jquery-3.2.1.min.js';
+                        //         $.getScript(init_js);
+                        //     }
+                       
+                        // });
+                         
+                        //     document.getElementById("myDiv").style.display = "none";
+
+                        })
+                        .catch(err => { throw err });
+                        
+                </script>
+
                 <script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSpk2-I61V7TFFomaxqOWv-Ir2ZeYkQM&callback=myMap"></script>
                 <footer class="footer footer-light border-top">
                     <div class="footer-top">
@@ -439,23 +577,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row flex">
-                                <div class="column width-12">
-                                    <hr class="mb-10 mb-mobile-30">
-                                </div>
-                                <div class="column width-6">
-                                    <p class="copyright pull-left clear-float-on-mobile">78 Point Blue (C) 2018</p>
-                                </div>
-                                <div class="column width-6">
-                                    <p class="copyright pull-right clear-float-on-mobile">Building and view not to scale
-                                    </p>
-                                </div>
+                           
+                        </div>
+                        <div class="row flex">
+                            <div class="column width-12">
+                                <hr class="mb-10 mb-mobile-30">
+                            </div>
+                            <div class="column width-6">
+                                <p class="copyright clear-float-on-mobile pull-left"> &copy; 2018 78 Point Blue Inc.
+                            </div>
+                            <div class="column width-6">
+                                <p class="copyright clear-float-on-mobile pull-right">Building and view not to scale.
                             </div>
                         </div>
                 </footer>
             </div>
         </div>
         <script src=js/timber.master.min.js></script>
+        
         <div id="fb-root"></div>
      <script>
        window.fbAsyncInit = function() {
