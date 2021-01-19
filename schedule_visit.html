@@ -180,7 +180,7 @@
 							<li>
 								<a href="#" class="scroll-link contains-sub-menu">FAQ</a>
 								<ul class="sub-menu">
-								  <li><a href="faq.html">Frequest Questions</a></li>
+								  <li><a href="faq.html">Frequent Questions</a></li>
 				  
 								  <li><a href="covid.html">COVID-19 Protocols</a></li>
 								</ul>
@@ -239,10 +239,10 @@
 							<nav class="navigation nav-block primary-navigation nav-right">
 								<ul>
 									<!-- <li class=""> <a hr	ef="index.html#overviews">Overview</a></li> -->
-									<!-- <li>
-										<a style='pointer-events: none;'>Locations</a>
+									<li>
+										<a href="locations.html">Locations</a>
 										<ul class="sub-menu">
-										  <li><a style='pointer-events: none;'>BGC<span class="icon-right"></span></a>
+										  <li><a href='bgc.html'>BGC<span class="icon-right"></span></a>
 											<ul class="sub-menu">
 											  <li><a href="visit/bonifacio-point.html">Bonifacio Point<br><sub>10 min walk to JPMorgan
 													BGC</sub></a></li>
@@ -255,7 +255,7 @@
 											</ul>
 										  </li>
 										  <li>
-											<a style='pointer-events: none;'>Makati<span class="icon-right"></span></a>
+											<a href='makati.html'>Makati<span class="icon-right"></span></a>
 											<ul class="sub-menu">
 											  <li><a href="visit/estrella-makati.html">Estrella Makati<br><sub>10 min walk to
 													Ayala/Buendia</sub></a></li>
@@ -266,15 +266,15 @@
 											</ul>
 										  </li>
 										</ul>
-									  </li> -->
-									  <li class=""> <a href="locations.html">Locations</a></li>
+									  </li>
+									  <!-- <li class=""> <a href="locations.html">Locations</a></li> -->
 									<li class=""> <a href="index.html#design">Design &amp; Inclusions</a></li>
 									<li class=""> <a href="index.html#fees">Monthly Fees</a></li>
 									<li class=""> <a href="projects.html">Upcoming Projects</a></li>
 									<li>
 										<a href="#" class="scroll-link contains-sub-menu">FAQ</a>
 										<ul class="sub-menu">
-											<li><a href="faq.html">Frequest Questions</a></li>
+											<li><a href="faq.html">Frequent Questions</a></li>
 							
 											<li><a href="covid.html">COVID-19 Protocols</a></li>
 										</ul>
@@ -307,13 +307,13 @@
 											</div>
 										</div>
 										<div class="column width-6 v-align-middle">
-											<div>
+											<!-- <div>
 												<ul
 													class="breadcrumb inline-block mb-0 pull-right clear-float-on-mobile">
 													<li> <a href="">Home</a></li>
 													<li> Schedule a Visit</li>
 												</ul>
-											</div>
+											</div> -->
 										</div>
 									</div>
 								</div>
@@ -450,8 +450,7 @@
 											</div>
 											<div class="column width-10">
 												<div class="field-wrapper">
-													<select class="form-wesite form-element rounded medium"
-														id="location" onchange='find_location(this.value)' required>
+													<select class="form-wesite form-element rounded medium" id="location" onchange='find_location(this.value)' required>
 
 													</select>
 												</div>
@@ -473,13 +472,26 @@
 												</div>
 											</div>
 										</div>
+
 										<div class="row">
 											<div class="column width-12">
+												<Br>
 												<div id="mapD" style="height:375px;"></div>
 
 											</div>
 										</div>
 										<br>
+										<div class="row">
+											<div class="column width-12">
+												<div class="field-wrapper pt-10 pb-10 center form-check ">
+													
+													<label for="checkbox_1" class="checkbox-label ">Click "Submit"  to agree
+														with <a href="privacy-policy.html"
+														class="lightbox-link" data-content=iframe data-modal-mode="" data-toolbar=""><b>Terms and Conditions</b></a> of our
+														Company</label>
+												</div>
+											</div>
+										</div>
 										<div class="row">
 											<div class="column width-12 center">
 												<button id="submit-1" type="submit" value="Schedule a Visit"
@@ -489,6 +501,7 @@
 										</div>
 									</form>
 									<script>
+										var mapD;
 										const params = new URLSearchParams(document.location.search);
 										if (params.get("name")) {
 											document.getElementById("name").readOnly = true;
@@ -559,7 +572,7 @@
 													document.getElementById('success').style.display = 'block';
 													document.getElementById("code").innerHTML = data;
 
-													console.log(data);
+													// console.log(data);
 
 
 												})
@@ -572,15 +585,17 @@
 										function myMap(lat, lang) {
 											var iconbase = 'images/assets/map-marker-mini.png';
 											if (lat) {
-												var latD = lat;
-												var lngD = lang;
-												var mapCanvasD = document.getElementById("mapD");
-												var mapOptionsD = {
-													center: new google.maps.LatLng(latD, lngD),
-													zoom: 16,
-													scrollwheel: false
-												};
-												var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+												var latD = parseFloat(lat);
+												var lngD = parseFloat(lang);
+												// alert(latD);
+												// var mapCanvasD = document.getElementById("mapD");
+												centerMap(latD,lngD);
+												// var mapOptionsD = {
+												// 	center: new google.maps.LatLng(latD, lngD),
+												// 	zoom: 16,
+												// 	scrollwheel: false
+												// };
+												//  mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
 												var markerD = new google.maps.Marker({
 													position: new google.maps.LatLng(latD, lngD),
 													map: mapD,
@@ -592,16 +607,19 @@
 												var mapCanvasD = document.getElementById("mapD");
 												var mapOptionsD = {
 													center: new google.maps.LatLng(latD, lngD),
-													zoom: 16,
+													zoom: 15,
 													scrollwheel: false
 												};
-												var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+												 mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
 												var markerD = new google.maps.Marker({
 													position: new google.maps.LatLng(latD, lngD),
 													map: mapD,
 												});
 											}
 
+										}
+										function centerMap(latD,lngD) {
+											mapD.panTo({"lat":latD,"lng":lngD});
 										}
 									</script>
 									<!-- <iframe id=hidden name=hidden onload=submitted style=display:none></iframe> -->
@@ -654,10 +672,12 @@
 									<div class=widget>
 										<h3 class="mb-30 widget-title">Microstudios</h3>
 										<ul>
-											<li><a href="index.html#overview">Overview</a>
-											<li><a href=index.html#design>Design & Inclusions</a>
-											<li><a href=index.html#fees>Monthly Fees</a>
-											<li><a href=faq.html>FAQ</a>
+											<li><a href="index.html#overview" >Overview</a></li>
+											<li><a href="index.html#design">Design & Inclusions</a></li>
+											<li><a href="index.html#fees" >Monthly Fees</a></li>
+											<li><a href="projects.html">Upcoming Project</a></li>
+											<li><a href="faq.html">FAQS</a></li>
+											<li><a href="covid.html">COVID-19 Protocol</a></li>
 										</ul>
 									</div>
 								</div>
@@ -665,9 +685,9 @@
 									<div class=widget>
 										<h3 class="mb-30 widget-title">Company</h3>
 										<ul>
-											<li><a href=index.html#overview>About</a>
-											<li><a href=index.html#fees>Terms</a>
-											<li><a href=privacy-policy.html>Privacy Policy</a>
+											<li><a href='index.html#overview'>About</a></li>
+											<!-- <li><a href=index.html#fees>Terms</a> -->
+											<li><a href='privacy-policy.html'>Privacy Policy</a> </li>
 												<li>
 													<a href=https://www.facebook.com/pointblueph>
 														<span class='small facebook-icon'>
@@ -683,11 +703,11 @@
 													</a>
 												</li>
 												<li>
-													<a href="tel:+639171332583" target="_blank">
+													<!-- <a href="tel:+639171332583" target="_blank"> -->
 													  <span class="small phone-icon">
 														<span class="font-sample-xs">  0917 133 2583 </span>
 													  </span>
-													</a>
+													<!-- </a> -->
 												  </li>
 												<li>
 													<a href="mailto:info@pointblue.ph">
@@ -708,10 +728,10 @@
 							<hr class="mb-10 mb-mobile-30">
 						</div>
 						<div class="column width-6">
-							<p class="copyright pull-left clear-float-on-mobile">78 Point Blue (C) 2018</p>
+							<p class="copyright clear-float-on-mobile pull-left"> &copy; 2018 78 Point Blue Inc.
 						</div>
 						<div class="column width-6">
-							<p class="copyright pull-right clear-float-on-mobile">Building and view not to scale</p>
+							<p class="copyright clear-float-on-mobile pull-right">Building and view not to scale.
 						</div>
 					</div>
 			</footer>
@@ -730,6 +750,8 @@
 			.then((data) => {
 
 				// console.log(data);
+				// $('#location').append('<option value=""></option>');
+				
 				jQuery.each(data, function (id) {
 					if (id != 0) {
 						$('#location').append('<option value="' + data[id][1] + "-" + data[id][0] + "-" + data[id][2] + "-" + data[id][3] + "-" + data[id][4] + '">' + data[id][1] + '</option>');

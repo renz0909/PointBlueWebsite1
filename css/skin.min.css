@@ -2171,7 +2171,8 @@ body {
 .tml-modal-mode #tml-exit {
     color: #111;
     top: 0;
-    right: 0
+    right: 0;
+    padding-right: 30px;
 }
 
 .tml-exit-light #tml-exit {

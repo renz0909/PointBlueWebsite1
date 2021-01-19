@@ -167,7 +167,7 @@
                 <nav class="nav-block side-navigation">
                     <ul>
                         <!-- <li class=""><a href=index.html#overview>Overview</a> -->
-                        <!-- <li><a href=index.html#locations class="contains-sub-menu">Locations</a>
+                        <li><a href=locations.html class="contains-sub-menu">Locations</a>
                             <ul class=sub-menu>
                                 <li><a href="visit/bonifacio-point.html">Bonifacio Point<br><sub>10 min walk to JPMorgan
                                             BGC</a>
@@ -181,15 +181,15 @@
                                             BGC</sub></a>
                                 <li><a href="visit/luna-bgc.html">Luna BGC<br><sub>5 min walk to Grand Hyatt
                                             BGC</sub></a>
-                            </ul> -->
-                            <li><a href="locations.html">Locations</a></li>
+                            </ul>
+                            <!-- <li><a href="locations.html">Locations</a></li> -->
                         <li><a href=index.html#design>Design & Inclusions</a>
                         <li><a href=index.html#fees>Monthly Fees</a>
                         <li><a href="projects.html">Upcoming Projects</a>
                         <li>
                             <a href="#" class="scroll-link contains-sub-menu">FAQ</a>
                             <ul class="sub-menu">
-                                <li><a href="faq.html">Frequest Questions</a></li>
+                                <li><a href="faq.html">Frequent Questions</a></li>
 
                                 <li><a href="covid.html">COVID-19 Protocols</a></li>
                             </ul>
@@ -247,10 +247,10 @@
                             <nav class="navigation nav-block primary-navigation nav-right">
                                 <ul>
                                     <!-- <li class=""> <a href="index.html#overviews">Overview</a></li> -->
-                                    <!-- <li>
-                                        <a style='pointer-events: none;'>Locations</a>
+                                    <li>
+                                        <a href='locations.html' >Locations</a>
                                         <ul class="sub-menu">
-                                            <li><a style='pointer-events: none;'>BGC<span class="icon-right"></span></a>
+                                            <li><a href='bgc.html'>BGC<span class="icon-right"></span></a>
                                                 <ul class="sub-menu">
                                                     <li><a href="visit/bonifacio-point.html">Bonifacio Point<br><sub>10
                                                                 min walk to JPMorgan
@@ -267,7 +267,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a style='pointer-events: none;'>Makati<span
+                                                <a href='makati.html'>Makati<span
                                                         class="icon-right"></span></a>
                                                 <ul class="sub-menu">
                                                     <li><a href="visit/estrella-makati.html">Estrella Makati<br><sub>10
@@ -281,15 +281,15 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </li> -->
-                                    <li><a href="locations.html">Locations</a></li>
+                                    </li>
+                                    <!-- <li><a href="locations.html">Locations</a></li> -->
                                     <li class=""> <a href="index.html#design">Design &amp; Inclusions</a></li>
                                     <li class=""> <a href="index.html#fees">Monthly Fees</a></li>
                                     <li class=""> <a href="projects.html">Upcoming Projects</a></li>
                                     <li>
                                         <a href="#" class="scroll-link contains-sub-menu">FAQ</a>
                                         <ul class="sub-menu">
-                                            <li><a href="faq.html">Frequest Questions</a></li>
+                                            <li><a href="faq.html">Frequent Questions</a></li>
 
                                             <li><a href="covid.html">COVID-19 Protocols</a></li>
                                         </ul>
@@ -326,7 +326,7 @@
                                                 <ul
                                                     class="breadcrumb inline-block mb-0 pull-right clear-float-on-mobile">
                                                     <li> <a href="locations.html">Locations</a></li>
-                                                    <li>Makati</li>
+                                                    <li>BGC</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -356,8 +356,13 @@
                                         </div>
                                         <div class="column width-6 v-align-middle">
                                             <div data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
-                                                <a href="#" onclick='myMap(14.560067,121.045951,"visit/bonifacio-point.html","bonifacio_point")'><h4 class="mb-0">Bonifacio Point</h4></a>
-                                                <img class='w3-animate-bottom' id='image_bp'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                                <a href="#"  id='bonifacio-link' onclick='myMap(14.560067,121.045951,"visit/bonifacio-point.html","bonifacio_point")'><h4 class="mb-0">Bonifacio Point</h4></a>
+                                                <div id='image_bp' class='w3-animate-left' style='display: none ;'>
+                                                    <br>
+                                                    <img   src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;'>
+                                                </div>  
+                                                
+                                            
                                             </div>
                                         </div>
 
@@ -370,8 +375,12 @@
                                         </div>
                                         <div class="column width-6 v-align-middle">
                                             <div>
-                                                <a href="#" onclick='myMap(14.557541,121.048855,"visit/ricarte-bgc.html","ricarte")'> <h4 class="mb-0">Recarte BGC</h4></a>
-                                                <img id='image_ricarte' class='w3-animate-bottom'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                                <a href="#" id='ricarte-link' onclick='myMap(14.557541,121.048855,"visit/ricarte-bgc.html","ricarte")'> <h4 class="mb-0">Ricarte BGC</h4></a>
+                                                
+                                                 <div id='image_ricarte' class='w3-animate-left' style='display: none ;'>
+                                                    <br>
+                                                    <img   src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;'>
+                                                </div>  
                                             </div>
                                         </div>
 
@@ -384,8 +393,12 @@
                                         </div>
                                         <div class="column width-6 v-align-middle">
                                             <div>
-                                                <a href="#" onclick='myMap(14.557555,121.048359,"visit/luna-bgc.html","luna")'> <h4 class="mb-0">Luna BGC</h4></a>
-                                                <img id='image_luna' class='w3-animate-left'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                                <a href="#" id='luna-link' onclick='myMap(14.557555,121.048359,"visit/luna-bgc.html","luna")'> <h4 class="mb-0">Luna BGC</h4></a>
+                                               
+                                               <div id='image_luna' class='w3-animate-left' style='display: none ;'>
+                                                    <br>
+                                                    <img   src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;'>
+                                                </div>  
                                             </div>
                                         </div>
 
@@ -398,8 +411,11 @@
                                         </div>
                                         <div class="column width-6 v-align-middle">
                                             <div>
-                                                <a href="#" onclick='myMap(14.561634,121.051591,"visit/quezon-bgc.html","quezon")'> <h4 class="mb-0">Quezon BGC</h4></a>
-                                                <img id='image_quezon' class='w3-animate-left'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                                <a href="#" id='quezon-link' onclick='myMap(14.561634,121.051591,"visit/quezon-bgc.html","quezon")'> <h4 class="mb-0">Quezon BGC</h4></a>
+                                                <div id='image_quezon' class='w3-animate-left' style='display: none ;'>
+                                                    <br>
+                                                    <img   src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;'>
+                                                </div>  
                                             </div>
                                         </div>
 
@@ -407,14 +423,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column width-7 w3-animate-opacity">
-                                <div id="mapD" style="height:375px;"></div>
-                                <br>
-                            <br>
-                            
-                            <div class='column width-9 v-align-middle'>&nbsp;</div>
-                            <div class='column width-3 v-align-middle'> <a id='view_more' href="#"  target='_blank' style='display:none;'> <button class="small other-buttons button color-white">View More</button>
-                              </a></div>
+                        <div class="column width-7 ">
+                            <div class='row flex pb-40'>
+                                <div class='column width-12 right'>
+                                    <div id="mapD" style="height:375px;"></div>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='width-12 right'> <a id='view_more' href="#"  target='_blank' style='display:none;'> <button class="rounded medium bkg-hover-theme button color-hover-white color-white "
+                                    style='background-color:#f4b65b ;'><b>View More</b></button>
+                                    </a>
+                                </div>
+                            </div>
                             <!-- <div class='column width-9 v-align-middle'>&nbsp;</div>
                             <div class='column width-3 v-align-middle'><a  href=''>View More</a></div> -->
                         </div>
@@ -434,10 +454,12 @@
                                         <div class=widget>
                                             <h3 class="mb-30 widget-title">Microstudios</h3>
                                             <ul>
-                                                <li><a href="index.html#overview">Overview</a>
-                                                <li><a href=index.html#design>Design & Inclusions</a>
-                                                <li><a href=index.html#fees>Monthly Fees</a>
-                                                <li><a href=faq.html>FAQ</a>
+                                                <li><a href="index.html#overview" class=scroll-link>Overview</a></li>
+                                                <li><a href="index.html#design" class=scroll-link>Design & Inclusions</a></li>
+                                                <li><a href="index.html#fees" class=scroll-link>Monthly Fees</a></li>
+                                                <li><a href="projects.html">Upcoming Project</a></li>
+                                                <li><a href="faq.html">FAQS</a></li>
+                                                <li><a href="covid.html">COVID-19 Protocol</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -446,8 +468,8 @@
                                             <h3 class="mb-30 widget-title">Company</h3>
                                             <ul>
                                                 <li><a href=index.html#overview>About</a> </li>
-                                                <li><a href=index.html#fees>Terms</a></li>
-                                                <li><a href=privacy-policy.html>Privacy Policy</a></li>
+                                                <!-- <li><a href=index.html#fees>Terms</a></li> -->
+                                                <li><a href="privacy-policy.html" class="lightbox-link" data-content=iframe data-modal-mode="" data-toolbar="">Privacy Policy</a></li>
                                                 <li>
                                                     <a href=https://www.facebook.com/pointblueph>
                                                         <span class='small facebook-icon'>
@@ -463,11 +485,11 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="tel:+639171332583" target="_blank">
+                                                    <!-- <a href="tel:+639171332583" target="_blank"> -->
                                                       <span class="small phone-icon">
                                                         <span class="font-sample-xs">  0917 133 2583 </span>
                                                       </span>
-                                                    </a>
+                                                    <!-- </a> -->
                                                 </li>
                                                 <li>
                                                     <a href="mailto:info@pointblue.ph">
@@ -498,59 +520,83 @@
             </div>
         </div>
         <script>
+            var mapD;
+            
+            function centerMap(latD,lngD)
+            {
+                mapD.panTo({"lat":latD,"lng":lngD});
+            }
             function myMap(lat, lang,location,id) 
             {
                 var iconbase = 'images/assets/map-marker-mini.png';
                 if (lat) {
                     var latD = lat;
                     var lngD = lang;
-                    var mapCanvasD = document.getElementById("mapD");
-                    var mapOptionsD = {
-                        center: new google.maps.LatLng(latD, lngD),
-                        zoom: 18,
-                        scrollwheel: false
-                    };
-                    var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
-                    var markerD = new google.maps.Marker({
-                        position: new google.maps.LatLng(latD, lngD),
-                        map: mapD,
-                    });
+                    // var mapCanvasD = document.getElementById("mapD");
+                    centerMap(latD,lngD);
+                    // var mapOptionsD = {
+                    //     center: new google.maps.LatLng(latD, lngD),
+                    //     zoom: 18,
+                    //     scrollwheel: false
+                    // };
+                    // var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+                    // var markerD = new google.maps.Marker({
+                    //     position: new google.maps.LatLng(latD, lngD),
+                    //     map: mapD,
+                    // });
                     // alert(location);
                     document.getElementById("view_more").href=location; 
                     document.getElementById("view_more").style.display = "block";
                     if(id == "bonifacio_point")
                     {
                   
-                    // document.getElementById("image_estrella_makati").src = url;
-                    document.getElementById("image_bp").style.display = "block";
-                    document.getElementById("image_ricarte").style.display = "none";
-                    document.getElementById("image_luna").style.display = "none";
-                    document.getElementById("image_quezon").style.display = "none";
+                    // document.getElementById("image_bp").style.display = "block";
+                    // document.getElementById("image_ricarte").style.display = "none";
+                    // document.getElementById("image_luna").style.display = "none";
+                    // document.getElementById("image_quezon").style.display = "none";
+                    document.getElementById("bonifacio-link").style.textDecoration  = "underline";
+                    document.getElementById("ricarte-link").style.textDecoration  = "none";
+                    document.getElementById("luna-link").style.textDecoration  = "none";
+                    document.getElementById("quezon-link").style.textDecoration  = "none";
                     }
                     else if(id == "ricarte")
                     {
                     
-                        // document.getElementById("image_teka").src = url;
-                        document.getElementById("image_bp").style.display = "none";
-                    document.getElementById("image_ricarte").style.display = "block";
-                    document.getElementById("image_luna").style.display = "none";
-                    document.getElementById("image_quezon").style.display = "none";
+                        // document.getElementById("image_bp").style.display = "none";
+                    // document.getElementById("image_ricarte").style.display = "block";
+                    // document.getElementById("image_luna").style.display = "none";
+                    // document.getElementById("image_quezon").style.display = "none";
+
+                    document.getElementById("bonifacio-link").style.textDecoration  = "none";
+                    document.getElementById("ricarte-link").style.textDecoration  = "underline";
+                    document.getElementById("luna-link").style.textDecoration  = "none";
+                    document.getElementById("quezon-link").style.textDecoration  = "none";
                     }
                     else if(id == "luna")
                     {
                     
                         // document.getElementById("image_teka").src = url;
-                        document.getElementById("image_bp").style.display = "none";
-                    document.getElementById("image_ricarte").style.display = "none";
-                    document.getElementById("image_luna").style.display = "block";
-                    document.getElementById("image_quezon").style.display = "none";
+                        // document.getElementById("image_bp").style.display = "none";
+                    // document.getElementById("image_ricarte").style.display = "none";
+                    // document.getElementById("image_luna").style.display = "block";
+                    // document.getElementById("image_quezon").style.display = "none";
+                    // // 
+                    document.getElementById("bonifacio-link").style.textDecoration  = "none";
+                    document.getElementById("ricarte-link").style.textDecoration  = "none";
+                    document.getElementById("luna-link").style.textDecoration  = "underline";
+                    document.getElementById("quezon-link").style.textDecoration  = "none";
                     }
                     else
                     {
-                        document.getElementById("image_bp").style.display = "none";
-                    document.getElementById("image_ricarte").style.display = "none";
-                    document.getElementById("image_luna").style.display = "none";
-                    document.getElementById("image_quezon").style.display = "block";
+                        // document.getElementById("image_bp").style.display = "none";
+                    // document.getElementById("image_ricarte").style.display = "none";
+                    // document.getElementById("image_luna").style.display = "none";
+                    // document.getElementById("image_quezon").style.display = "block";
+
+                    document.getElementById("bonifacio-link").style.textDecoration  = "none";
+                    document.getElementById("ricarte-link").style.textDecoration  = "none";
+                    document.getElementById("luna-link").style.textDecoration  = "none";
+                    document.getElementById("quezon-link").style.textDecoration  = "underline";
                     }
                 }
 
@@ -586,7 +632,7 @@
                         zoom: 16,
                         scrollwheel: false
                     };
-                    var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+                     mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
                     var markerD = new google.maps.Marker({
                         position: new google.maps.LatLng(latD, lngD),
                         map: mapD,
@@ -616,6 +662,8 @@
         <script src="js/timber.master.min.js"></script>
         <div id="fb-root"></div>
         <script>
+
+            
             window.fbAsyncInit = function () {
                 FB.init({
                     xfbml: true,

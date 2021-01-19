@@ -188,7 +188,7 @@
                         <li>
                             <a href="#" class="scroll-link contains-sub-menu">FAQ</a>
                             <ul class="sub-menu">
-                                <li><a href="faq.html">Frequest Questions</a></li>
+                                <li><a href="faq.html">Frequent Questions</a></li>
 
                                 <li><a href="covid.html">COVID-19 Protocols</a></li>
                             </ul>
@@ -246,10 +246,10 @@
                             <nav class="navigation nav-block primary-navigation nav-right">
                                 <ul>
                                     <!-- <li class=""> <a href="index.html#overviews">Overview</a></li> -->
-                                    <!-- <li>
-                                        <a style='pointer-events: none;'>Locations</a>
+                                    <li>
+                                        <a href="locations.html">Locations</a>
                                         <ul class="sub-menu">
-                                            <li><a style='pointer-events: none;'>BGC<span class="icon-right"></span></a>
+                                            <li><a href='bgc.html'>BGC<span class="icon-right"></span></a>
                                                 <ul class="sub-menu">
                                                     <li><a href="visit/bonifacio-point.html">Bonifacio Point<br><sub>10
                                                                 min walk to JPMorgan
@@ -266,7 +266,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a style='pointer-events: none;'>Makati<span
+                                                <a href='makati.html'>Makati<span
                                                         class="icon-right"></span></a>
                                                 <ul class="sub-menu">
                                                     <li><a href="visit/estrella-makati.html">Estrella Makati<br><sub>10
@@ -280,16 +280,16 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    </li> -->
+                                    </li>
                                     
-                                    <li class=""> <a href="locations.html">Locations</a></li>
+                                    <!-- <li class=""> <a href="locations.html">Locations</a></li> -->
                                     <li class=""> <a href="index.html#design">Design &amp; Inclusions</a></li>
                                     <li class=""> <a href="index.html#fees">Monthly Fees</a></li>
                                     <li class=""> <a href="projects.html">Upcoming Projects</a></li>
                                     <li>
                                         <a href="#" class="scroll-link contains-sub-menu">FAQ</a>
                                         <ul class="sub-menu">
-                                            <li><a href="faq.html">Frequest Questions</a></li>
+                                            <li><a href="faq.html">Frequent Questions</a></li>
 
                                             <li><a href="covid.html">COVID-19 Protocols</a></li>
                                         </ul>
@@ -356,8 +356,10 @@
                                         </div>
                                         <div class="column width-6 v-align-middle">
                                             <div data-animate-in="preset:turnInLeft;duration:1000ms;" data-threshold="0.7">
-                                                <a href="#" onclick='myMap(14.564718,121.009539,"visit/estrella-makati.html","estrella")'><h4 class="mb-0">Estrella Makati</h4></a>
-                                                <img class='w3-animate-left' id='image_estrella_makati'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                                <a href="#" id='estrella-link' onclick='myMap(14.564718,121.009539,"visit/estrella-makati.html","estrella")'><h4 class="mb-0">Estrella Makati</h4></a>
+                                                <div class='w3-animate-left' id='image_estrella_makati' style='display: none ;'><br>
+                                                    <img  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;' >
+                                                </div>
                                             </div>
                                         </div>
 
@@ -370,8 +372,11 @@
                                         </div>
                                         <div class="column width-6 v-align-middle">
                                             <div>
-                                                <a href="#" onclick='myMap(14.565434,121.010051,"visit/teka-makati.html","teka")'> <h4 class="mb-0">Teka Makati</h4></a>
-                                                <img id='image_teka' class='w3-animate-left'  src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;height150px;display: none ;'>
+                                                <a href="#" id='teka-link' onclick='myMap(14.565434,121.010051,"visit/teka-makati.html","teka")'> <h4 class="mb-0">Teka Makati</h4></a>
+                                                <div id='image_teka' class='w3-animate-left' style='display: none ;'>
+                                                    <br>
+                                                    <img   src='https://drive.google.com/uc?export=view&id=1syHi46TZzlgmxPGVQput85g539oWkF6b' style='width:100%;'>
+                                                </div>    
                                             </div>
                                         </div>
 
@@ -379,14 +384,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column width-7 w3-animate-opacity ">
+                        <div class="column width-7">
                             <div class='row flex pb-40'>
                                 <div class='column width-12 right'>
                                     <div id="mapD" style="height:375px;"></div>
                                 </div>
                             </div>
                             <div class='row'>
-                                <div class='width-12 right'> <a id='view_more' href="#"  target='_blank' style='display:none;' > <button class="small other-buttons button color-white">View More</button>
+                                <div class='width-12 right'> <a id='view_more' href="#"  target='_blank' style='display:none;' > <button class="rounded medium bkg-hover-theme button color-hover-white color-white "
+                                    style='background-color:#f4b65b ;'><b>View More</b></button>
+                                
+                                
                                 </a>
                                 </div>
                             </div>
@@ -409,10 +417,12 @@
                                         <div class=widget>
                                             <h3 class="mb-30 widget-title">Microstudios</h3>
                                             <ul>
-                                                <li><a href="index.html#overview">Overview</a>
-                                                <li><a href=index.html#design>Design & Inclusions</a>
-                                                <li><a href=index.html#fees>Monthly Fees</a>
-                                                <li><a href=faq.html>FAQ</a>
+                                                <li><a href="index.html#overview" >Overview</a></li>
+                                                <li><a href="index.html#design">Design & Inclusions</a></li>
+                                                <li><a href="index.html#fees" >Monthly Fees</a></li>
+                                                <li><a href="projects.html">Upcoming Project</a></li>
+                                                <li><a href="faq.html">FAQS</a></li>
+                                                <li><a href="covid.html">COVID-19 Protocol</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -421,8 +431,8 @@
                                             <h3 class="mb-30 widget-title">Company</h3>
                                             <ul>
                                                 <li><a href=index.html#overview>About</a> </li>
-                                                <li><a href=index.html#fees>Terms</a></li>
-                                                <li><a href=privacy-policy.html>Privacy Policy</a></li>
+                                                <!-- <li><a href=index.html#fees>Terms</a></li> -->
+                                                <li><a href="privacy-policy.html" class="lightbox-link" data-content=iframe data-modal-mode="" data-toolbar="">Privacy Policy</a></li>
                                                 <li>
                                                     <a href=https://www.facebook.com/pointblueph>
                                                         <span class='small facebook-icon'>
@@ -438,11 +448,11 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="tel:+639171332583" target="_blank">
+                                                    <!-- <a href="tel:+639171332583" target="_blank"> -->
                                                       <span class="small phone-icon">
                                                         <span class="font-sample-xs">  0917 133 2583 </span>
                                                       </span>
-                                                    </a>
+                                                    <!-- </a> -->
                                                   </li>
                                                 <li>
                                                     <a href="mailto:info@pointblue.ph">
@@ -473,40 +483,50 @@
             </div>
         </div>
         <script>
+            var mapD;
+            
             function myMap(lat, lang,location,id) 
             {
                 var iconbase = 'images/assets/map-marker-mini.png';
                 if (lat) {
                     var latD = lat;
                     var lngD = lang;
-                    var mapCanvasD = document.getElementById("mapD");
-                    var mapOptionsD = {
-                        center: new google.maps.LatLng(latD, lngD),
-                        zoom: 18,
-                        scrollwheel: false
-                    };
-                    var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
-                    var markerD = new google.maps.Marker({
-                        position: new google.maps.LatLng(latD, lngD),
-                        map: mapD,
-                    });
+                    // alert(EuropeBounds);
+                    centerMap(latD,lngD);
+                    // var mapCanvasD = document.getElementById("mapD");
+                    // var mapOptionsD = {
+                    //     center: new google.maps.LatLng(latD, lngD),
+                    //     zoom: 18,
+                    //     scrollwheel: false
+                    // };
+                    // var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+                    // var markerD = new google.maps.Marker({
+                    //     position: new google.maps.LatLng(latD, lngD),
+                    //     map: mapD,
+                    // });
                     // alert(location);
                     if(id == "estrella")
                     {
                     document.getElementById("view_more").href=location; 
                     document.getElementById("view_more").style.display = "block";
-                    // document.getElementById("image_estrella_makati").src = url;
-                    document.getElementById("image_estrella_makati").style.display = "block";
-                    document.getElementById("image_teka").style.display = "none";
+
+                    // document.getElementById("image_estrella_makati").style.display = "block";
+                    // document.getElementById("image_teka").style.display = "none";
+                    
+                    document.getElementById("estrella-link").style.textDecoration  = "underline";
+                    document.getElementById("teka-link").style.textDecoration  = "none";
                     }
                     else
                     {
                         document.getElementById("view_more").href=location; 
                         document.getElementById("view_more").style.display = "block";
-                        // document.getElementById("image_teka").src = url;
-                        document.getElementById("image_teka").style.display = "block";
-                        document.getElementById("image_estrella_makati").style.display = "none";
+                        // document.getElementById("image_teka").style.display = "block";
+                        // document.getElementById("image_estrella_makati").style.display = "none";
+                        document.getElementById("estrella-link").style.textDecoration  = "none";
+                        document.getElementById("teka-link").style.textDecoration  = "underline";
                     }
+
+                 
                 }
 
                 else {
@@ -524,7 +544,8 @@
                         zoom: 18,
                         scrollwheel: false
                     };
-                    var mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+                    // map = new google.maps.Map(mapCanvasD, mapOptionsD);
+                     mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
                     var markerD = new google.maps.Marker({
                         position: new google.maps.LatLng(latD, lngD),
                         map: mapD,
@@ -534,6 +555,10 @@
                         map: mapD,
                     });
                 }
+
+                function centerMap(latD,lngD) {
+                        mapD.panTo({"lat":latD,"lng":lngD});
+                    }
 
             }
            

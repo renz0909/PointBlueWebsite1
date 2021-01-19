@@ -45,7 +45,7 @@
     text-decoration: none;
     padding-left: 15px;
     margin-left: 5px;
-    margin-top:-2px;
+    margin-top:5px;
   }
 
   .email-icon:before {
@@ -66,12 +66,12 @@
     text-decoration: none;
     padding-left: 15px;
     margin-left: 5px;
-    margin-top:-2px;
+    margin-top:5px;
   }
 
   .phone-icon:before {
     content: '';
-    background: url('https://drive.google.com/uc?export=view&id=1NkQyeolWTO7h-Fe6lTMV0cYD2aNcOLV_');
+    background: url('https://drive.google.com/uc?export=view&id=1t9jxdAUyZqW8zDNvV3ACpuN-POyoAQkl');
     background-size: cover;
     position: absolute;
     width: 15px;
@@ -79,4 +79,15 @@
     margin-left: -20px;
     margin-top: 3px;
   }
- 
+ /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+

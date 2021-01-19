@@ -2161,9 +2161,7 @@ label.pull-right {
 input,
 select,
 textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    /* appearance: none; */
     -webkit-border-radius: 0
 }
 
