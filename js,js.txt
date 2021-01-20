@@ -1,0 +1,66 @@
+	document.getElementById("myDiv").style.display = "block";
+		var link = "https://script.google.com/macros/s/AKfycbzABhKSxD1ibNN1TOzt5_Xrp26jAWjoE0MBqrxuLup2tVQ9L3A/exec";
+
+		fetch(link).then(res => res.json())
+			.then((data) => {
+				jQuery.each(data, function (id) {
+					if (id != 0) {
+						$('#location').append('<option value="' + data[id][1] + "-" + data[id][0] + "-" + data[id][2] + "-" + data[id][3] + "-" + data[id][4] + '">' + data[id][1] + '</option>');
+					}
+				});
+				document.getElementById("myDiv").style.display = "none";
+
+			})
+			.catch(err => { throw err });
+
+
+		var timeOptions = ["7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM",
+			"9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM",
+			"11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM",
+			"1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
+			"3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
+			"5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM",
+			"7:00 PM"];
+
+		var timeOptions24hr = ['7:00', '7:30', '8:00', '8:30',
+			'9:00', '9:30', '10:00', '10:30',
+			'11:00', '11:30', '12:00', '12:30',
+			'13:00', '13:30', '14:00', '14:30',
+			'15:00', '15:30', '16:00', '16:30',
+			'17:00', '17:30', '18:00', '18:30',
+			'19:00'];
+		for (var i = 0; i < timeOptions.length; i++) {
+			// console.log(timeOptions[i]);
+			$('#preffered_time').append('<option value="' + timeOptions[i] + '">' + timeOptions[i] + '</option>');
+		}
+
+		function change_time(value) {
+			$('#preffered_time').val(''); 
+			var currentDate = new Date($.now());
+			var getM = (String(currentDate.getMonth() + 1).length < 2) ? '0' + (currentDate.getMonth() + 1) : (currentDate.getMonth() + 1);
+			var getD = (String(currentDate.getDate()).length < 2) ? '0' + (currentDate.getDate()) : currentDate.getDate();
+			var curDate = currentDate.getFullYear() + '-' + getM + '-' + getD;
+
+			function timeToSeconds(time) {
+				time = time.split(/:/);
+				return time[0] * 3600 + time[1] * 60 + time[2];
+			}
+
+			if (value == curDate) {
+
+				for (var i = 0; i < timeOptions.length + 4; i++) {
+
+					if ((new Date(curDate + ' ' + timeOptions24hr[i]).getTime()) < (d.getTime())) {
+						$("#preffered_time option[value=\'" + timeOptions[i] + "\']").hide();
+
+					} else {
+						break;
+					}
+				}
+			} 
+			else {
+				for (var i = 0; i < timeOptions.length + 4; i++) {
+					$("#preffered_time option[value=\'" + timeOptions[i] + "\']").show();
+				}
+			}
+		}
