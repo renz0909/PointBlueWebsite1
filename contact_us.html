@@ -403,13 +403,13 @@
 					</div>
 				</div>
 			</div>
-			<div id="success" class="w3-modal " style='color:black'>
-				<div class="w3-modal-content" style='width:600px;'>
-					<header style='background-color:#444c74;padding:10px;' class="w3-container ">
+			<div id="success" class="w3-modal " style='color:black' >
+				<div class="w3-modal-content w3-animate-top" style='width:600px;border-radius:7px;'>
+					<header style='background-color:#444c74;padding:10px;border-top-left-radius: 7px;border-top-right-radius: 7px;' class="w3-container ">
 						<a href='#'> <span onclick="document.getElementById('success').style.display='none'"
 								class=" w3-display-topright"
 								style='padding:0px;color:white;margin:0px;background-color:transparent;margin:5px;'>
-								<h5 style='color:white;'>X</h5>
+								<h5 style='color:white;margin-right:5px;' class='mt-5 '>&times;</h5>
 							</span></a>
 						<h5 style='color:white;margin:0px;'>Point Blue Team</h5>
 					</header>
@@ -508,7 +508,7 @@
 							<hr class="mb-10 mb-mobile-30">
 						</div>
 						<div class="column width-6">
-							<p class="copyright clear-float-on-mobile pull-left"> &copy; 2018 78 Point Blue Inc.
+							<p class="copyright clear-float-on-mobile pull-left"> &copy; 2018 AllRise Development Corp.
 						</div>
 						<div class="column width-6">
 							<p class="copyright clear-float-on-mobile pull-right">Building and view not to scale.
@@ -517,41 +517,9 @@
 			</footer>
 		</div>
 	</div>
-	<script>
-
-		function uploadData() {
-
-			var url_origin = window.location.href;
-			var name = document.getElementById("name").value;
-			var email = document.getElementById("email").value;
-			var mobile_number = document.getElementById("mobile_number").value;
-			var inquiry = document.getElementById("inquiry").value;
-			var url_origin = url_origin;
-			var link = "https://script.google.com/macros/s/AKfycbwTNwRuaDZUDwGakONXNRGR5r1uBS_YygXa3EIw_Xt2V2DCrp_8-EGMQQ/exec?name=" + name + "&contact_number=" + mobile_number + "&email=" + email + "&inquiry=" + inquiry + "&url_origin=" + url_origin;
-
-			fetch(link).then(res => res.json())
-				.then((data) => {
-					document.getElementById("myDiv").style.display = "block";
-					// console.log(data.results[0]);
-					document.getElementById('success').style.display = 'block';
-					document.getElementById("myDiv").style.display = "none";
-					console.log(data);
-
-					document.getElementById("link_visit").href = "schedule_visit.html?name=" + data.name + "&email=" + data.email + "&contact_number=" + data.contact_number;
-					document.getElementById("name").value = "";
-					document.getElementById("email").value = "";
-					document.getElementById("mobile_number").value = "";
-					document.getElementById("inquiry").value = "";
-
-				})
-				.catch(err => { throw err });
-			document.getElementById("myDiv").style.display = "block";
-			console.log(link);
-			return false;
-		}
-	</script>
+	<script src="js/js.js"></script>
 	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script> -->
 	<script src="js/timber.master.min.js"></script>
 	<div id="fb-root"></div>
 	<script>

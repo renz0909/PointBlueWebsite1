@@ -185,3 +185,35 @@
         function centerMap(latD,lngD) {
             mapD.panTo({"lat":latD,"lng":lngD});
         }
+
+        function uploadData() 
+        {
+
+			var url_origin = window.location.href;
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var mobile_number = document.getElementById("mobile_number").value;
+			var inquiry = document.getElementById("inquiry").value;
+			var url_origin = url_origin;
+			var link = "https://script.google.com/macros/s/AKfycbwTNwRuaDZUDwGakONXNRGR5r1uBS_YygXa3EIw_Xt2V2DCrp_8-EGMQQ/exec?name=" + name + "&contact_number=" + mobile_number + "&email=" + email + "&inquiry=" + inquiry + "&url_origin=" + url_origin;
+
+			fetch(link).then(res => res.json())
+				.then((data) => {
+					document.getElementById("myDiv").style.display = "block";
+					// console.log(data.results[0]);
+					document.getElementById('success').style.display = 'block';
+					document.getElementById("myDiv").style.display = "none";
+					// console.log(data);
+
+					document.getElementById("link_visit").href = "schedule_visit.html?name=" + data.name + "&email=" + data.email + "&contact_number=" + data.contact_number;
+					document.getElementById("name").value = "";
+					document.getElementById("email").value = "";
+					document.getElementById("mobile_number").value = "";
+					document.getElementById("inquiry").value = "";
+
+				})
+				.catch(err => { throw err });
+			document.getElementById("myDiv").style.display = "block";
+			console.log(link);
+			return false;
+		}
