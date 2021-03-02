@@ -1,12 +1,18 @@
 	    document.getElementById("myDiv").style.display = "block";
-		var link = "https://script.google.com/macros/s/AKfycbzABhKSxD1ibNN1TOzt5_Xrp26jAWjoE0MBqrxuLup2tVQ9L3A/exec";
+		var link = "https://script.google.com/macros/s/AKfycbwItSIa1juRCbPG2gf1ro_FaJVpqKMlzb33AZ04TRVJqdgtw1qai6aE/exec";
 
 		fetch(link).then(res => res.json())
 			.then((data) => {
+                console.log(data);
+                
+
+                $('#location').append('<option ></option>');
 				jQuery.each(data, function (id) {
-					if (id != 0) {
-						$('#location').append('<option value="' + data[id][1] + "-" + data[id][0] + "-" + data[id][2] + "-" + data[id][3] + "-" + data[id][4] + '">' + data[id][1] + '</option>');
-					}
+               
+                    if(data[id].status === true)
+                    {
+						$('#location').append('<option value="' + data[id].building_name + "-" + data[id].code + "-" + data[id].building_address + "-" + data[id].lat + "-" + data[id].long + '"-"'+data[id].google_map +'">' + data[id].building_name + '</option>');
+                    }
 				});
 				document.getElementById("myDiv").style.display = "none";
 
@@ -67,16 +73,14 @@
         
         var mapD;
         const params = new URLSearchParams(document.location.search);
-        if (params.get("name")) {
+        if (params.get("name"))
+        {
             document.getElementById("name").readOnly = true;
             document.getElementById("email").readOnly = true;
             document.getElementById("mobile_number").readOnly = true;
             document.getElementById("name").value = params.get("name");
             document.getElementById("email").value = params.get("email");
             document.getElementById("mobile_number").value = params.get("contact_number");
-        }
-        else {
-
         }
         var today = new Date();
         document.getElementById("preffered_date").min = formatDate(today);
@@ -125,7 +129,7 @@
             var preffered_time = document.getElementById("preffered_time").value;
             var location = document.getElementById("location").value;
             var result = location.split("-");
-            var link = "https://script.google.com/macros/s/AKfycbwn2DO770FAgfjUKUgijQ2bGoHDHb84zaHb32JwGovQG2FylzhBP0aq/exec?code=" + result[1] + "&name=" + name + "&email=" + email + "&preffered_tour_date=" + preffered_date + "&preffered_tour_time=" + preffered_time + "&contact_number=" + mobile_number + "&pref_location="+ result[0];
+            var link = "https://script.google.com/macros/s/AKfycbwn2DO770FAgfjUKUgijQ2bGoHDHb84zaHb32JwGovQG2FylzhBP0aq/exec?code=" + result[1] + "&name=" + name + "&email=" + email + "&preffered_tour_date=" + preffered_date + "&preffered_tour_time=" + preffered_time + "&contact_number=" + mobile_number + "&pref_location="+ result[0]+"&maplink="+result[5];
 
             fetch(link).then(res => res.json())
                 .then((data) => {
@@ -175,45 +179,15 @@
                     scrollwheel: false
                 };
                  mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
-                var markerD = new google.maps.Marker({
-                    position: new google.maps.LatLng(latD, lngD),
-                    map: mapD,
-                });
+                // var markerD = new google.maps.Marker({
+                //     position: new google.maps.LatLng(latD, lngD),
+                //     map: mapD,
+                // });
             }
 
         }
         function centerMap(latD,lngD) {
             mapD.panTo({"lat":latD,"lng":lngD});
         }
-
-        function uploadData() 
-        {
-
-			var url_origin = window.location.href;
-			var name = document.getElementById("name").value;
-			var email = document.getElementById("email").value;
-			var mobile_number = document.getElementById("mobile_number").value;
-			var inquiry = document.getElementById("inquiry").value;
-			var url_origin = url_origin;
-			var link = "https://script.google.com/macros/s/AKfycbwTNwRuaDZUDwGakONXNRGR5r1uBS_YygXa3EIw_Xt2V2DCrp_8-EGMQQ/exec?name=" + name + "&contact_number=" + mobile_number + "&email=" + email + "&inquiry=" + inquiry + "&url_origin=" + url_origin;
-
-			fetch(link).then(res => res.json())
-				.then((data) => {
-					document.getElementById("myDiv").style.display = "block";
-					// console.log(data.results[0]);
-					document.getElementById('success').style.display = 'block';
-					document.getElementById("myDiv").style.display = "none";
-					// console.log(data);
-
-					document.getElementById("link_visit").href = "schedule_visit.html?name=" + data.name + "&email=" + data.email + "&contact_number=" + data.contact_number;
-					document.getElementById("name").value = "";
-					document.getElementById("email").value = "";
-					document.getElementById("mobile_number").value = "";
-					document.getElementById("inquiry").value = "";
-
-				})
-				.catch(err => { throw err });
-			document.getElementById("myDiv").style.display = "block";
-			console.log(link);
-			return false;
-		}
+    
+        
