@@ -11,7 +11,7 @@
                
                     if(data[id].status === true)
                     {
-						$('#location').append('<option value="' + data[id].building_name + "-" + data[id].code + "-" + data[id].building_address + "-" + data[id].lat + "-" + data[id].long + '"-"'+data[id].google_map +'">' + data[id].building_name + '</option>');
+						$('#location').append('<option value="' + data[id].building_name + "-" + data[id].code + "-" + data[id].building_address + "-" + data[id].lat + "-" + data[id].long + '"-"'+data[id].google_map  +'">' + data[id].building_name + '</option>');
                     }
 				});
 				document.getElementById("myDiv").style.display = "none";
@@ -140,6 +140,7 @@
                     document.getElementById('success').style.display = 'block';
                     document.getElementById("code").innerHTML = data;
 
+                    document.getElementById("form").reset();
                     // console.log(data);
 
 

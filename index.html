@@ -61,23 +61,16 @@
   <link href=css/style.css rel=stylesheet>
   <!-- <link href=css/custom.css rel=stylesheet> -->
   <meta name="google-site-verification" content="e2pDSg7Rkaiik3r1bM2HfR1kzZ9udzcdhVU0c-9SCPA" />
-  <script>
-    var link = "https://script.google.com/a/macros/pointblue.ph/s/AKfycbwQt1ZrW2AxXOmd9yue4WrD-JsAui_QYtl7RucFIoUJXyoBbOU41Cc/exec";
-
-fetch(link).then(res => res.json())
-  .then((data) => {
-
-
-      console.log(data); 
-  })
-  .catch(err => { throw err });
-  // document.getElementById("myDiv").style.display = "block";
-  console.log(link);
-  </script>
+  
   <!--[if lt IE 9]><script src=http://html5shiv.googlecode.com/svn/trunk/html5.js></script><![endif]-->
 </head>
 
 <body class="home-page shop">
+  <div id="myDiv" style="display:none;" class="loader">
+		<div class="loader-page">
+
+		</div>
+	</div>
   <aside class="enter-right side-navigation-wrapper" data-animation=scale-in data-no-scrollbar>
     <div class=side-navigation-scroll-pane>
       <div class=side-navigation-inner>
@@ -278,7 +271,7 @@ fetch(link).then(res => res.json())
                   <div class="center v-align-middle tms-content-inner">
                     <div class=row>
                       <div class="column width-12 tms-perspective">
-                        <h1 class="weight-semi-bold color-white mb-5 no-scale title-xmedium tms-caption"
+                        <h1 id='website_title' class="weight-semi-bold color-white mb-5 no-scale title-xmedium tms-caption"
                           data-animate-in=preset:slideInUpShort;duration:800ms;delay:400ms; data-no-scale=""
                           style="transform:translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0) scale3d(1,1,1);opacity:1;transform-origin:50% 50% 0;visibility:visible">
                           Affordable studios for rent near <br> Makati near Ayala and BGC</h1>
@@ -289,9 +282,8 @@ fetch(link).then(res => res.json())
                         <p class="lead color-white mb-40 no-scale tms-caption"
                           data-animate-in=preset:slideInUpShort;duration:800ms;delay:100ms; data-no-scale=""
                           style="transform:translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0) scale3d(1,1,1);opacity:1;transform-origin:50% 50% 0;visibility:visible">
-                          <br>Starting from <span class='min'></span> to <span class='max'></span>
-                          <br>Get up to 15% monthly rent discount now!
-
+                          <br>Starting from <span class='min' id='minimum'></span> to <span class='max' id='maximum'></span>
+                          <br><span id='promotion_info'></span>
                         <div class=clear></div><a href="schedule_visit.html"
                           class="rounded medium bkg-hover-theme button color-hover-white color-white border-white no-scale text-small text-uppercase tms-caption"
                           data-animate-in=preset:slideInUpShort;duration:800ms;delay:1000ms; data-no-scale=""
@@ -641,11 +633,34 @@ fetch(link).then(res => res.json())
     </footer>
   </div>
   </div>
+ 
   <script src=js/jquery-3.2.1.min.js></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src=js/jquery.tm.avalanche.js></script>
   <script src=js/timber.master.min.js></script>
+  <script>
+
+    document.getElementById("myDiv").style.display = "block";
+    var link = "https://script.google.com/macros/s/AKfycbyjJ23JnUFnDmEIrGrYl2Td3BpbsVEO5lKEj-e0l0iviGXmGnvzw2iO/exec";
+
+    fetch(link).then(res => res.json())
+      .then((data) => {
+                console.log(data);
+                document.getElementById("minimum").innerHTML = data.min;
+                document.getElementById("maximum").innerHTML = data.max;
+                document.getElementById("promotion_info").innerHTML = data.promotion_info;
+                var website_title = data.website_title;
+                website_title = website_title.replace(/(\r\n|\n\r|\r|\n)/g, '<br>');
+                
+                document.getElementById("website_title").innerHTML = website_title;
+      
+        document.getElementById("myDiv").style.display = "none";
+
+      })
+      .catch(err => { throw err });
+
+</script>
   <!-- Load Facebook SDK for JavaScript -->
   <!-- Load Facebook SDK for JavaScript -->
   <!-- Load Facebook SDK for JavaScript -->

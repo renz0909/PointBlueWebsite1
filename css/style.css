@@ -1,3 +1,10 @@
+.m_design
+{
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.575);
+-webkit-box-shadow: 0 0 10px   rgba(0, 0, 0, 0.575);
+box-shadow: 0 0 10px   rgba(0, 0, 0, 0.575);
+}
+
 .facebook-icon {
     width: 100px;
     display: block;

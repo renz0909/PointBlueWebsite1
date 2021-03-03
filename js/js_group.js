@@ -97,7 +97,7 @@ function letMap(lat, lang,location,id)
         //     position: new google.maps.LatLng(latD, lngD),
         //     map: mapD,
         // });
-        document.getElementById("view_more").href="location.html?id="+location; 
+        document.getElementById("view_more").href="location.html?id="+id; 
         document.getElementById("view_more").style.display = "block";
         $(".images").css("display", "none");
         $("#image_"+id).css("display", "block");
