@@ -36,7 +36,7 @@ fetch(link).then(res => res.json())
 
     });
     slideshow += '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>';
-    slideshow += '<a class="next" onclick="plusSlides(1)">&#10095;</a>';
+    slideshow += '<a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>';
     slideshow += '</div>';
         
     slideshow += '<div style="text-align:center">';
@@ -81,6 +81,8 @@ fetch(link).then(res => res.json())
                 slides[slideIndex-1].style.display = "block";
                 dots[slideIndex-1].className += " active";
               }
+
+              
     if(data.virtual_tour_link)
     {
       document.getElementById("footer_buttons_header").style.display = "none";
@@ -92,6 +94,7 @@ fetch(link).then(res => res.json())
 })
 .catch(err => { throw err });
 var slideIndex = 1;
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -100,6 +103,10 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+
+
+
+
 
 function showSlides(n) {
   var i;
@@ -115,4 +122,21 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+var iteration = true;
+var time = new Date();
+var delay = 5000; // 5 secondes
+
+while(iteration) {
+    if(time.getTime() + 5000 < new Date().getTime()) {
+         iteration = false;
+    }
+}
+
+setInterval(click, 5000);
+
+function click()
+{
+  $("#next").click();
 }

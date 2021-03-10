@@ -43,14 +43,22 @@ src="https://www.facebook.com/tr?id=185667705862961&ev=PageView
     <link href="images/point-blue-favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href=images/point-blue-favicon.ico rel="shortcut icon" type=image/x-icon>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Roboto:300,400,500,700%7CHind+Madurai:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href=css/core.min.css rel=stylesheet>
   <link href=css/skin.min.css rel=stylesheet>
+  
+  <link href=css/faq.css rel=stylesheet>
   <!-- <link href=css/custom.css rel=stylesheet> -->
   <!-- <link href=css/style.css rel=stylesheet> -->
     <!--[if lt IE 9]> <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
   </head>
 
   <body class="shop">
+    <div id="myDiv" style="display:none;" class="loader">
+      <div class="loader-page">
+  
+      </div>
+    </div>
     <aside class="enter-right side-navigation-wrapper" data-animation=scale-in data-no-scrollbar>
       <div class=side-navigation-scroll-pane>
         <div class=side-navigation-inner>
@@ -142,62 +150,13 @@ src="https://www.facebook.com/tr?id=185667705862961&ev=PageView
                   <ul>
                     <!-- <li class=""> <a href="index.html#overviews">Overview</a></li> -->
                    
-                  <li>
-                    <a href='locations.html'>Locations</a>
-                    <ul class="sub-menu">
-                      <li><a href='group.html?id=1'>BGC<span class="icon-right"></span></a>
-                        <ul class="sub-menu">
-                          <li><a href="location.html?id=1">Bonifacio Point
-                            <!-- <br>
-                            <sub>10 min walk to JPMorgan BGC</sub> -->
-                          </a></li>
-                          <li><a href="location.html?id=2">Ricarte BGC
-                            <!-- <br>
-                            <sub>5 min walk to Grand Hyatt BGC</sub> -->
-                          </a>
-                        </li>
-                          <li>
-                            <a href="location.html?id=5">Luna BGC
-                              <!-- <br>
-                              <sub>5 min walk to Grand Hyatt BGC</sub> -->
-                            </a>
-                          </li>
-                          <li>
-                            <a href="location.html?id=6">Quezon BGC
-                              <!-- <br>
-                              <sub>5 min walk to Uptown BGC</sub> -->
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href='group.html?id=2'>Makati<span class="icon-right"></span></a>
-                        <ul class="sub-menu">
-                          <li>
-                            <a href="location.html?id=4">Estrella Makati
-                              <!-- <br><sub>10 min walk to
-                                Ayala/Buendia</sub> -->
-                              </a>
-                            </li>
-                          <li>
-                            <a href="location.html?id=3">Teka Makati
-                              <!-- <br>
-                              <sub>10 min walk to
-                                Ayala/Buendia</sub> -->
-                              </a>
-                            </li>
-                            <li>
-                              <a href="location.html?id=7">Ramos Makati
-                                <!-- <br>
-                                <sub>10 min walk to
-                                  Ayala/Buendia</sub> -->
-                                </a>
-                              </li>
-
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
+                    <li >
+                      <a href='locations.html'>Locations</a>
+                      <ul class="sub-menu"  id='location_request'>
+                        
+                       
+                      </ul>
+                    </li>
   
                     <!-- <li><a href="locations.html">Locations</a></li> -->
                     <li class=""> <a href="index.html#design">Design &amp; Inclusions</a></li>
@@ -253,170 +212,8 @@ src="https://www.facebook.com/tr?id=185667705862961&ev=PageView
           </div>
           <div class="section-block pt-60 pb-10">
             <div class="row">
-              <div class="column width-7">
-                <h3 class="mb-30">Before Moving In</h3>
-                <div class="accordion unstyled rounded" data-toggle-icon data-toggle-multiple>
-                  <ul>
-                    <li class="active"><a href=#accordion-1-panel-1 class=q>What is an integrated microstudio?</a>
-                      <div id=accordion-1-panel-1>
-                        <div class=accordion-content>
-                          <p align="justify">An integrated microstudio is a furnished living space that is thoughtfully maximised to achieve not only an aesthetic appeal, but also efficiency and practicality. Each integrated microstudio has its own bathroom and kitchenette, and is well-ventilated and sound-insulated as much as possible to give you the peace and privacy you deserve.</div>
-                      </div>
-                    </li>
-                    <li><a href=#accordion-1-panel-2>How can I rent an integrated microstudio?</a>
-                      <div id=accordion-1-panel-2>
-                        <div class=accordion-content>
-                          <p align="justify">It’s a 4-step easy process: register, select, pay, then move in.
-                          <p align="justify">To get started, register to become a resident by accomplishing the online application. If approved, submit documentary requirements and select and reserve your integrated microstudio. Once ready, sign the lease contract and pay for the initial fees. Finally, pack your stuff and move in to your new living space.
-                          <p align="justify">You can email us at info@pointblue.ph for assistance and more information.</div>
-                      </div>
-                    </li>
-                    <li><a href=#accordion-1-panel-3>How can I view a microstudio in person?</a>
-                      <div id=accordion-1-panel-3>
-                        <div class=accordion-content>
-                          <p align="justify">You can schedule a visit through this website. We accommodate tours everyday, anytime between 7:00 AM and 7:00 PM, given that there are available units to view.
-
-                          <p align="justify">If you’re 100% sure about renting an integrated microstudio and don’t need a tour, just submit an application online.
-
-                          <p>You can email us at info@pointblue.ph for assistance and more information.
-                        </div>
-                      </div>
-                    </li>
-                    <li><a href=#accordion-1-panel-3>What do you look for in an application?</a>
-                      <div id=accordion-1-panel-3>
-                        <div class=accordion-content>
-                          <p align="justify">Our community is founded on mutual respect. We look for residents who will be responsible members of our community. Having mutual respect and sense of responsibility as a resident means that you will conform to community guidelines and will pay rent on time—a matter that can’t be stressed enough.</div>
-                      </div>
-                    </li>
-                    <li><a href=#accordion-1-panel-2a>What documentary requirements do I have to submit?</a>
-                      <div id=accordion-1-panel-2a>
-                        <div class=accordion-content>
-                          <p align="justify">You will have to submit documents that will prove your identity, employment, and financial capacity to pay the monthly fees. These include, but are not limited to, government-issued or company IDs, employment certificate, most recent payslips, and bank or credit card statements.
-
-                        </div>
-                    </li>
-                    <li><a href=#accordion-1-panel-4>What are the terms of lease contract?</a>
-                      <div id=accordion-1-panel-4>
-                        <div class=accordion-content>
-                          <img alt=paymentterms src=images/PB_PaymentTerms.png>
-                        </div>
-                    </li>
-
-                    <li><a href=#accordion-1-panel-5>How can I reserve an integrated microstudio?</a>
-                      <div id=accordion-1-panel-5>
-                        <div class=accordion-content>
-                          <p align="justify">We do not accommodate reservations. A unit will only be held for you once the initial deposit has been made. </div>
-                      </div>
-                    </li>
-                    <li><a href=#accordion-1-panel-9>How can I pay for the initial fees?</a>
-                      <div id=accordion-1-panel-9>
-                        <div class=accordion-content>
-                          <p>We accept payments through bank deposits and checks.</div>
-                      </div>
-                    </li>
-                    <li><a href=#accordion-1-panel-6>Can I share an integrated microstudio with other people?</a>
-                      <div id=accordion-1-panel-6>
-                        <div class=accordion-content>
-                          <p align="justify">You can share it with just one (1) person, since we only allow a maximum of two (2) occupants per microstudio. Both residents will need to submit their requirements through one application form.</div>
-                      </div>
-                    </li>
-                    <li><a href=#accordion-1-panel-10>What are not allowed inside the property?</a>
-                      <div id=accordion-1-panel-10>
-                        <div class=accordion-content>
-                          <p align="justify">We do not allow kids and pets in the property. Cooking is also prohibited, unless with the use of microwave ovens and steam-based appliances. We have a set of House Rules, which residents must follow.
-                        </div>
-                      </div>
-                    </li>
-
-
-
-                    <li><a href=#accordion-1-panel-11>How secure is each integrated microstudio and the building?</a>
-                      <div id=accordion-1-panel-11>
-                        <div class=accordion-content>
-                          <p align="justify">Our resident staff routinely roam around the building to ensure that entrances are secured, and that the residents are safe. All entrances are also equipped with biometric locks that will only activate for registered fingerprints. Moreover, the common areas of the building are covered by high definition surveillance cameras. 
-
-                            <br>
-                            <br>You can also contact us for safety and security concerns through info@pointblue.ph or any of our hotlines.
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <h3 class="mb-30">During Stay</h3>
-                <div class="accordion unstyled rounded" data-toggle-icon data-toggle-multiple>
-                  <ul>
-                    <li><a href=#accordion-2-panel-1>How do I pay the monthly rent and for the utilities?</a>
-                      <div id=accordion-2-panel-1>
-                        <div class=accordion-content>
-                          <p align="justify">You can pay your monthly rent through banks deposits or post-dated checks. The checks must be submitted upon contract signing during your move-in.
-
-                            <br>
-                            <br>Electricity bills will be slipped under your door, and you must settle directly with Meralco.
-                          <p align="justify">For water, we will be sending you an email billing every month, and payments must be made via bank deposits or transfers. The water billing is computed based on your water reading consumption.</div>
-                      </div>
-                    <li><a href=#accordion-2-panel-2>What services can I avail of during my stay?</a>
-                      <div id=accordion-2-panel-2>
-                        <div class=accordion-content>
-                          <p align="justify">We have free bathroom cleanings twice a month. This is optional, and tenants may avail of it by scheduling through the Tenant Service Request Form.
-
-                        </div>
-                      </div>
-                    <li><a href=#accordion-2-panel-3>Is there a curfew?</a>
-                      <div id=accordion-2-panel-3>
-                        <div class=accordion-content>
-                          <p align="justify">No, there’s no point in locking you out of your own living space at 3 o’clock in the morning. But there’s a curfew on noise though. Again, our community is based on mutual respect. We always need to consider the impact on your neighbors.</div>
-                      </div>
-
-                    <li><a href=#accordion-2-panel-5>Can I have overnight guests?</a>
-                      <div id=accordion-2-panel-6>
-                        <div class=accordion-content>
-                          <p align="justify">Guests are allowed to stay overnight. However, if they are staying for more than three (3) consecutive days, please make sure to get approval from Management first. We hope you understand that we reserve the right to deny guests if it negatively impacts our community.</div>
-                      </div>
-                    <li><a href=#accordion-2-panel-4>Can I cook inside the integrated microstudio?</a>
-                      <div id=accordion-2-panel-4>
-                        <div class=accordion-content>
-                          <p align="justify">We understand the joy and importance of being able to cook inside your living space. But as a fire safety measure, we only allow cooking using steam-based electric appliances, or the microwave oven that comes standard with your microstudio.</div>
-                      </div>
-
-
-                    <li><a href=#accordion-2-panel-7>What options do I have when going to and from places?</a>
-                      <div id=accordion-2-panel-8>
-                        <div class=accordion-content>
-                          <p align="justify">Point Blue’s buildings are within walking distance to the business districts of Makati or BGC. You are given several options for commute in any of the areas, and are also close to bus terminals and train stations. They may also be located via Waze or Grab. 
-                        </div>
-                      </div>
-                    <li><a href=#accordion-2-panel-8>Are there nearby markets and grocery stores?</a>
-                      <div id=accordion-2-panel-9>
-                        <div class=accordion-content>
-                          <p align="justify">There are several groceries, convenience stores, and public markets in the neighborhoods where our buildings are situated. You can also find good food finds in the area!
-                        </div>
-                      </div>
-                  </ul>
-                </div>
-                <h3 class="mb-30">When Moving Out</h3>
-                <div class="accordion unstyled rounded" data-toggle-icon data-toggle-multiple>
-                  <ul>
-                    <li><a href=#accordion-3-panel-1>When do I have to notify you that I will be moving out or will not be renewing our lease contract?</a>
-                      <div id=accordion-3-panel-1>
-                        <div class=accordion-content>
-                          <p align="justify">We ask for confirmation of renewal at least thirty (30) days before the end of lease. 
-                        </div>
-                      </div>
-                    <li><a href=#accordion-3-panel-2>When can I get my security deposit back?
-                      </a>
-                      <div id=accordion-3-panel-2>
-                        <div class=accordion-content>
-                          <p align="justify">Your security deposit will be returned within thirty (30) banking days, after the necessary deductions have been made, given that no provisions of the contract or policies have been violated, and that you have carried out the full term of your lease. This may include, but is not limited to, electricity charges, water arrears, and unit damages. 
-                        </div>
-                      </div>
-                    <li><a href=#accordion-3-panel-3>What happens if I pre-terminate my contract?
-                      </a>
-                      <div id=accordion-3-panel-3>
-                        <div class=accordion-content>
-                          <p align="justify">Your security deposit will be forfeited should you pre-terminate your contract.</div>
-                      </div>
-                  </ul>
-                </div>
+              <div class="column width-7" id='category'>
+               
               </div>
 
             </div>
@@ -502,6 +299,21 @@ src="https://www.facebook.com/tr?id=185667705862961&ev=PageView
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
     <script src="js/timber.master.min.js"></script>
+    <script src=js/l.js></script>
+    <script src=js/faq.js></script>
+    <script>
+    function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    document.getElementById("b-"+id).className = "icon-minus";
+    x.className += " w3-show";
+  } else {
+    document.getElementById("b-"+id).className = "icon-plus";
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+  
+    </script>
     <div id="fb-root"></div>
      <script>
        window.fbAsyncInit = function() {

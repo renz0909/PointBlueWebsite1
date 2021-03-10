@@ -79,16 +79,13 @@
         </div>
         <nav class="nav-block side-navigation">
           <ul>
-            <li>
-              <a href="locations.html" class="scroll-link contains-sub-menu">Locations</a>
-              <ul class=sub-menu>
-                <li><a href="locations.html?id=1">Bonifacio Point</a>
-                <li><a href="visit/ricarte-bgc.html">Ricarte BGC<br><sub>5 min walk to Grand Hyatt BGC</a>
-                <li><a href="visit/teka-makati.html">Teka Makati<br><sub>10 min walk to Ayala/Buendia</sub></a>
-                <li><a href="visit/estrella-makati.html">Estrella Makati<br><sub>10 min walk to Ayala/Buendia</sub></a>
-                <li><a href="visit/quezon-street-bgc.html">Quezon BGC<br><sub>5 min walk to Uptown BGC</sub></a>
-                <li><a href="visit/luna-bgc.html">Luna BGC<br><sub>5 min walk to Grand Hyatt BGC</sub></a>
-              </ul> 
+            <li >
+              <a href='locations.html'>Locations</a>
+              <ul class="sub-menu"  id='location_r'>
+                
+               
+              </ul>
+            </li>
               <!-- <li><a href="locations.html">Locations</a></li> -->
             <li><a href=#design class=scroll-link>Design & Inclusions</a>
             <li><a href=#fees class=scroll-link>Monthly Fees</a>
@@ -156,14 +153,15 @@
 
     <div class=wrapper-inner>
 
-      <header class="header header-absolute header-fixed-on-mobile header-transparent" data-bkg-threshold=100
-        data-sticky-threshold=0>
+      <header class="header header-absolute header-fixed-on-mobile " data-bkg-threshold=100
+        data-sticky-threshold=0 style="background-color: #414e72;opacity: .9;">
         <div class="header-inner">
           <div class="row nav-bar">
             <div class="nav-bar-inner">
               <div class=logo style=width:180px!important;>
                 <div class=logo-inner>
-                  <a href='index.html'><img alt="Point Blue" src=images/point-blue-logo.png></a>
+                  <a href='index.html'><img
+                     alt="Point Blue" src=images/point-blue-logo.png></a>
                   <a href='index.html'><img alt="Point Blue" src=images/point-blue-logo.png></a>
                 </div>
               </div>
@@ -177,60 +175,11 @@
                 <ul>
                   <!-- <li ><a href="locations.html" >Locations</a></li> -->
 
-                  <li>
+                  <li >
                     <a href='locations.html'>Locations</a>
-                    <ul class="sub-menu">
-                      <li><a href='group.html?id=1'>BGC<span class="icon-right"></span></a>
-                        <ul class="sub-menu">
-                          <li><a href="location.html?id=1">Bonifacio Point
-                            <!-- <br>
-                            <sub>10 min walk to JPMorgan BGC</sub> -->
-                          </a></li>
-                          <li><a href="location.html?id=2">Ricarte BGC
-                            <!-- <br>
-                            <sub>5 min walk to Grand Hyatt BGC</sub> -->
-                          </a>
-                        </li>
-                          <li>
-                            <a href="location.html?id=5">Luna BGC
-                              <!-- <br>
-                              <sub>5 min walk to Grand Hyatt BGC</sub> -->
-                            </a>
-                          </li>
-                          <li>
-                            <a href="location.html?id=6">Quezon BGC
-                              <!-- <br>
-                              <sub>5 min walk to Uptown BGC</sub> -->
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href='group.html?id=2'>Makati<span class="icon-right"></span></a>
-                        <ul class="sub-menu">
-                          <li>
-                            <a href="location.html?id=4">Estrella Makati
-                              <!-- <br><sub>10 min walk to
-                                Ayala/Buendia</sub> -->
-                              </a>
-                            </li>
-                          <li>
-                            <a href="location.html?id=3">Teka Makati
-                              <!-- <br>
-                              <sub>10 min walk to
-                                Ayala/Buendia</sub> -->
-                              </a>
-                            </li>
-                            <li>
-                              <a href="location.html?id=7">Ramos Makati
-                                <!-- <br>
-                                <sub>10 min walk to
-                                  Ayala/Buendia</sub> -->
-                                </a>
-                              </li>
-
-                        </ul>
-                      </li>
+                    <ul class="sub-menu"  id='location_request'>
+                      
+                     
                     </ul>
                   </li>
 
@@ -475,7 +424,7 @@
               <div class="active animate" id=tabs-1-pane-1>
                 <div class=tab-content>
                   <p class=lead><b>Rent</b></P>
-                  <p align="justify"><b><span class='min'></span> to <span class='max'></span></b> per month</p>
+                  <p align="justify"><b><span id='min1'></span> to <span id='max1'></span></b> per month</p>
                   <p align="justify">The monthly rent depends on the unit layout, but is already inclusive of
                     association dues, internet fee, and taxes.</p>
                   <p class=lead><b>Utility bills</b>
@@ -639,6 +588,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src=js/jquery.tm.avalanche.js></script>
   <script src=js/timber.master.min.js></script>
+  <script src=js/l.js></script>
   <script>
 
     document.getElementById("myDiv").style.display = "block";
@@ -649,6 +599,8 @@
                 console.log(data);
                 document.getElementById("minimum").innerHTML = data.min;
                 document.getElementById("maximum").innerHTML = data.max;
+                document.getElementById("min1").innerHTML = data.min;
+                document.getElementById("max1").innerHTML = data.max;
                 document.getElementById("promotion_info").innerHTML = data.promotion_info;
                 var website_title = data.website_title;
                 website_title = website_title.replace(/(\r\n|\n\r|\r|\n)/g, '<br>');

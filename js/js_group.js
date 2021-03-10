@@ -11,7 +11,7 @@ fetch(link).then(res => res.json())
     
     document.getElementById("group_name").innerHTML = data.group;
     document.getElementById("group_name_a").innerHTML = data.group;
-    var l = data.locations[id].id;
+    // var l = data.locations[id].id;
     var iconbase = 'images/assets/map-marker-mini.png';
     var mapCanvasD = document.getElementById("mapD");
     var mapOptionsD = {
@@ -31,7 +31,7 @@ fetch(link).then(res => res.json())
             b += '</div>';
             b += '<div class="column width-6 v-align-middle">';
             b += '<div>';
-            b += '<a href="#" id="'+data.locations[id].building_name+'" onclick="letMap('+data.locations[id].lat+','+data.locations[id].long+','+l+','+data.locations[id].id+')"> <h4 class="mb-0">'+data.locations[id].building_name+'</h4></a>';
+            b += '<a href="#" id="'+data.locations[id].building_name+'" onclick="letMap('+data.locations[id].lat+','+data.locations[id].long+','+data.locations[id].id+','+data.locations[id].id+')"> <h4 class="mb-0">'+data.locations[id].building_name+'</h4></a>';
             b += '<div id="image_'+data.locations[id].id+'" class="w3-animate-left images" style="display: none;">';
             b += '<br>';
             b += ' <img   src="'+data.locations[id].images[0]+'" style="width:100%;">';

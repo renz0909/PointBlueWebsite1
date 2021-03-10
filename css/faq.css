@@ -1,0 +1,59 @@
+
+
+.loader {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: rgb(249, 249, 249);
+			opacity: .8;
+			background-size: 200px 120px;
+		}
+
+		.loader-page {
+
+			position: absolute;
+			left: 50%;
+			top: 50vh;
+			z-index: 1;
+			border: 16px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 16px solid #192a48;
+			width: 120px;
+			height: 120px;
+			-webkit-animation: spin 2s linear infinite;
+			/* Safari */
+			animation: spin 2s linear infinite;
+			/* width: 100%;
+		height: 100%; */
+			z-index: 1;
+			/* background: url("loader.gif") 50% 50% no-repeat rgb(249, 249, 249); */
+			/* opacity: .8; */
+			/* background-size: 200px 120px; */
+
+		}
+
+    @-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+    * {box-sizing:border-box}
+

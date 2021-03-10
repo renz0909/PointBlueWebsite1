@@ -116,60 +116,11 @@
 				<nav class="nav-block side-navigation">
 					<ul>
 						<!-- <li class=""><a href=index.html#overview>Overview</a> -->
-							<li>
+							<li >
 								<a href='locations.html'>Locations</a>
-								<ul class="sub-menu">
-								  <li><a href='group.html?id=1'>BGC<span class="icon-right"></span></a>
-									<ul class="sub-menu">
-									  <li><a href="location.html?id=1">Bonifacio Point
-										<!-- <br>
-										<sub>10 min walk to JPMorgan BGC</sub> -->
-									  </a></li>
-									  <li><a href="location.html?id=2">Ricarte BGC
-										<!-- <br>
-										<sub>5 min walk to Grand Hyatt BGC</sub> -->
-									  </a>
-									</li>
-									  <li>
-										<a href="location.html?id=5">Luna BGC
-										  <!-- <br>
-										  <sub>5 min walk to Grand Hyatt BGC</sub> -->
-										</a>
-									  </li>
-									  <li>
-										<a href="location.html?id=6">Quezon BGC
-										  <!-- <br>
-										  <sub>5 min walk to Uptown BGC</sub> -->
-										</a>
-									  </li>
-									</ul>
-								  </li>
-								  <li>
-									<a href='group.html?id=2'>Makati<span class="icon-right"></span></a>
-									<ul class="sub-menu">
-									  <li>
-										<a href="location.html?id=4">Estrella Makati
-										  <!-- <br><sub>10 min walk to
-											Ayala/Buendia</sub> -->
-										  </a>
-										</li>
-									  <li>
-										<a href="location.html?id=3">Teka Makati
-										  <!-- <br>
-										  <sub>10 min walk to
-											Ayala/Buendia</sub> -->
-										  </a>
-										</li>
-										<li>
-										  <a href="location.html?id=7">Ramos Makati
-											<!-- <br>
-											<sub>10 min walk to
-											  Ayala/Buendia</sub> -->
-											</a>
-										  </li>
-			
-									</ul>
-								  </li>
+								<ul class="sub-menu"  id='location_r'>
+								  
+								 
 								</ul>
 							  </li>
 			
@@ -238,60 +189,11 @@
 							<nav class="navigation nav-block primary-navigation nav-right">
 								<ul>
 									<!-- <li class=""> <a href="index.html#overviews">Overview</a></li> -->
-									<li>
+									<li >
 										<a href='locations.html'>Locations</a>
-										<ul class="sub-menu">
-										  <li><a href='bgc.html'>BGC<span class="icon-right"></span></a>
-											<ul class="sub-menu">
-											  <li><a href="location.html?id=1">Bonifacio Point
-												<!-- <br>
-												<sub>10 min walk to JPMorgan BGC</sub> -->
-											  </a></li>
-											  <li><a href="location.html?id=2">Ricarte BGC
-												<!-- <br>
-												<sub>5 min walk to Grand Hyatt BGC</sub> -->
-											  </a>
-											</li>
-											  <li>
-												<a href="location.html?id=5">Luna BGC
-												  <!-- <br>
-												  <sub>5 min walk to Grand Hyatt BGC</sub> -->
-												</a>
-											  </li>
-											  <li>
-												<a href="location.html?id=6">Quezon BGC
-												  <!-- <br>
-												  <sub>5 min walk to Uptown BGC</sub> -->
-												</a>
-											  </li>
-											</ul>
-										  </li>
-										  <li>
-											<a href='makati.html'>Makati<span class="icon-right"></span></a>
-											<ul class="sub-menu">
-											  <li>
-												<a href="location.html?id=4">Estrella Makati
-												  <!-- <br><sub>10 min walk to
-													Ayala/Buendia</sub> -->
-												  </a>
-												</li>
-											  <li>
-												<a href="location.html?id=3">Teka Makati
-												  <!-- <br>
-												  <sub>10 min walk to
-													Ayala/Buendia</sub> -->
-												  </a>
-												</li>
-												<li>
-												  <a href="location.html?id=3">Ramos Makati
-													<!-- <br>
-													<sub>10 min walk to
-													  Ayala/Buendia</sub> -->
-													</a>
-												  </li>
-					
-											</ul>
-										  </li>
+										<ul class="sub-menu"  id='location_request'>
+										  
+										 
 										</ul>
 									  </li>
 					
@@ -440,15 +342,15 @@
 								style='padding:0px;color:white;margin:0px;background-color:transparent;margin:5px;'>
 								<h5 style='color:white;margin-right:5px;' class='mt-5 '>&times;</h5>
 							</span></a>
-						<h5 style='color:white;margin:0px;font-family: Roboto;' >Point Blue Team</h5>
+						<h5 style='color:white;margin:0px;font-family: Roboto;' ><b>Point Blue Team</b></h5>
 					</header>
 					<div class="w3-container" style='font-family: Arial, sans-serif;'>
 						<p>
 						<h2 style='font-family: Roboto;'>Thank you!</h2>
-						</p><br>
+						</p>
 						<p>Your inquiry has been sent. Please give us time to check on it and our representative will
 							contact you soon.</p>
-						<p>For the meantime, would you like:</p>
+						<p>For the meantime, would you like to:</p>
 						<div class="row">
 							<div class="column width-12 center">
 								<a href='' target='_blank' id='link_visit' type="submit" value="Schedule a Visit"
@@ -548,6 +450,7 @@
 	</div>
 	<script>
 		
+							// document.getElementById('success').style.display = 'block';
 		 const form = document.getElementById('form');
             form.addEventListener('submit', e => {
 			document.getElementById("myDiv").style.display = "block";
@@ -567,12 +470,11 @@
 					fetch(link).then(res => res.json())
 						.then((data) => {
 							document.getElementById("myDiv").style.display = "block";
-							// console.log(data.results[0]);
 							document.getElementById('success').style.display = 'block';
 							document.getElementById("myDiv").style.display = "none";
-							// console.log(data);
+							console.log(data);
 
-							document.getElementById("link_visit").href = "schedule_visit.html?name=" + data.name + "&email=" + data.email + "&contact_number=" + data.contact_number;
+							document.getElementById("link_visit").href = "schedule_visit.html?name=" + data.name + "&email=" + data.email + "&contact_number=" + data.contact_number + "&user_id="+data.user_id;
 							document.getElementById("name").value = "";
 							document.getElementById("email").value = "";
 							document.getElementById("mobile_number").value = "";
@@ -619,7 +521,9 @@
 							document.getElementById("myDiv").style.display = "none";
 							// console.log(data);
 
-							document.getElementById("link_visit").href = "schedule_visit.html?name=" + data.name + "&email=" + data.email + "&contact_number=" + data.contact_number;
+							console.log(data);
+
+							document.getElementById("link_visit").href = "schedule_visit.html?name=" + data.name + "&email=" + data.email + "&contact_number=" + data.contact_number + "&user_id="+data.user_id;
 							document.getElementById("name").value = "";
 							document.getElementById("email").value = "";
 							document.getElementById("mobile_number").value = "";
@@ -643,6 +547,8 @@
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script> -->
 	<script src="js/timber.master.min.js"></script>
+	<script src=js/l.js></script>
+	<script src=js/l.js></script>
 	<div id="fb-root"></div>
 	<script>
 		window.fbAsyncInit = function () {

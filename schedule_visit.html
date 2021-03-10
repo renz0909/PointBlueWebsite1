@@ -239,60 +239,11 @@
 							<nav class="navigation nav-block primary-navigation nav-right">
 								<ul>
 									<!-- <li class=""> <a hr	ef="index.html#overviews">Overview</a></li> -->
-									<li>
+									<li >
 										<a href='locations.html'>Locations</a>
-										<ul class="sub-menu">
-										  <li><a href='group.html?id=1'>BGC<span class="icon-right"></span></a>
-											<ul class="sub-menu">
-											  <li><a href="location.html?id=1">Bonifacio Point
-												<!-- <br>
-												<sub>10 min walk to JPMorgan BGC</sub> -->
-											  </a></li>
-											  <li><a href="location.html?id=2">Ricarte BGC
-												<!-- <br>
-												<sub>5 min walk to Grand Hyatt BGC</sub> -->
-											  </a>
-											</li>
-											  <li>
-												<a href="location.html?id=5">Luna BGC
-												  <!-- <br>
-												  <sub>5 min walk to Grand Hyatt BGC</sub> -->
-												</a>
-											  </li>
-											  <li>
-												<a href="location.html?id=6">Quezon BGC
-												  <!-- <br>
-												  <sub>5 min walk to Uptown BGC</sub> -->
-												</a>
-											  </li>
-											</ul>
-										  </li>
-										  <li>
-											<a href='group.html?id=2'>Makati<span class="icon-right"></span></a>
-											<ul class="sub-menu">
-											  <li>
-												<a href="location.html?id=4">Estrella Makati
-												  <!-- <br><sub>10 min walk to
-													Ayala/Buendia</sub> -->
-												  </a>
-												</li>
-											  <li>
-												<a href="location.html?id=3">Teka Makati
-												  <!-- <br>
-												  <sub>10 min walk to
-													Ayala/Buendia</sub> -->
-												  </a>
-												</li>
-												<li>
-												  <a href="location.html?id=7">Ramos Makati
-													<!-- <br>
-													<sub>10 min walk to
-													  Ayala/Buendia</sub> -->
-													</a>
-												  </li>
-					
-											</ul>
-										  </li>
+										<ul class="sub-menu"  id='location_request'>
+										  
+										 
 										</ul>
 									  </li>
 					
@@ -410,6 +361,7 @@
 													<input type="number" id="mobile_number" name="mobile_number"
 														class="form-wesite form-element rounded medium"
 														placeholder="09XXXXXXXXX" tabindex="3" required>
+														<input type="hidden" id="user_id" name="user_id" >
 												</div>
 											</div>
 										</div>
@@ -428,6 +380,21 @@
 												</div>
 											</div>
 										</div>
+										
+										<div class="row">
+											<div class="column width-2">
+												<div class="field-wrapper form-label">
+													Building Location
+												</div>
+											</div>
+											<div class="column width-10">
+												<div class="field-wrapper">
+													<select class="form-wesite form-element rounded medium" id="location" onchange='find_location(this.value);change_location_point();' required>
+
+													</select>
+												</div>
+											</div>
+										</div>
 										<div class="row">
 											<div class="column width-2">
 												<div class="field-wrapper form-label">
@@ -440,47 +407,8 @@
 													<select class="form-wesite form-element rounded medium"
 														id="preffered_time" tabindex="6" required>
 														<option selected="" disabled="">--:-- --</option>
-														<option value="7:00 AM">7:00 AM</option>
-														<option value="7:30 AM">7:30 AM</option>
-														<option value="8:00 AM">8:00 AM</option>
-														<option value="8:30 AM">8:30 AM</option>
-														<option value="9:00 AM">9:00 AM</option>
-														<option value="9:30 AM">9:30 AM</option>
-														<option value="10:00 AM">10:00 AM</option>
-														<option value="10:30 AM">10:30 AM</option>
-														<option value="11:00 AM">11:00 AM</option>
-														<option value="11:30 AM">11:30 AM</option>
-														<option value="12:00 PM">12:00 PM</option>
-														<option value="12:30 PM">12:30 PM</option>
-														<option value="1:00 PM">1:00 PM</option>
-														<option value="1:30 PM">1:30 PM</option>
-														<option value="2:00 PM">2:00 PM</option>
-														<option value="2:30 PM">2:30 PM</option>
-														<option value="3:00 PM">3:00 PM</option>
-														<option value="3:30 PM">3:30 PM</option>
-														<option value="4:00 PM">4:00 PM</option>
-														<option value="4:30 PM">4:30 PM</option>
-														<option value="5:00 PM">5:00 PM</option>
-														<option value="5:30 PM">5:30 PM</option>
-														<option value="6:00 PM">6:00 PM</option>
-														<option value="6:30 PM">6:30 PM</option>
-														<option value="7:00 PM">7:00 PM</option>
 													</select>
 
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="column width-2">
-												<div class="field-wrapper form-label">
-													Building Location
-												</div>
-											</div>
-											<div class="column width-10">
-												<div class="field-wrapper">
-													<select class="form-wesite form-element rounded medium" id="location" onchange='find_location(this.value)' required>
-
-													</select>
 												</div>
 											</div>
 										</div>
@@ -540,16 +468,37 @@
 					<header style='background-color:#444c74;padding:10px;border-top-left-radius: 7px;border-top-right-radius: 7px;' class="w3-container ">
 						<a href='#'> <span onclick="document.getElementById('success').style.display='none'"
 								class=" w3-display-topright"
-								style='padding:0px;color:white;margin:0px;background-color:transparent;margin:5px;'>
+								style='padding:0px;color:white;margin:0px;background-color:transparent;margin:10px;'>
 								<h5 style='color:white;'>&times;</h5>
 							</span></a>
-						<h5 style='color:white;margin:0px;font-family: Roboto;'>Thank you for choosing Point Blue!</h5>
+						<h5 style='color:white;margin:0px;font-family: Roboto;'><b>Point Blue Team</b></h5>
 					</header>
 					<div class="w3-container w3-center" style="font-family: Roboto;">
 						<br>
 						<p>Your request has been submitted successfully. Your Tour Reference Number is </p>
-						<h2 style='font-family: Roboto;;'><b id='code'></b></h2>
-						<p></p>Please wait for an email on the confirmation of your visit. Thank you!
+						<h1 style='font-family: Roboto;'><b id='code'></b></h1>
+						<p>Please wait for an email on the confirmation of your visit. Thank you!
+
+						</p>
+					</div>
+
+				</div>
+			</div>
+			<div id="select_another_time" class="w3-modal " style='color:black'>
+				<div class="w3-modal-content m_design" style='width:600px;border-radius:7px;'>
+					<header style='background-color:#444c74;padding:10px;border-top-left-radius: 7px;border-top-right-radius: 7px;' class="w3-container ">
+						<a href='#'> <span onclick="document.getElementById('select_another_time').style.display='none'"
+								class=" w3-display-topright"
+								style='padding:0px;color:white;margin:0px;background-color:transparent;margin:10px;'>
+								<h5 style='color:white;'>&times;</h5>
+							</span></a>
+						<h5 style='color:white;margin:0px;font-family: Roboto;'><b>Point Blue Team</b></h5>
+					</header>
+					<div class="w3-container w3-center" style="font-family: Roboto;">
+						<br>
+						<!-- <p>Your request has been submitted successfully. Your Tour Reference Number is </p> -->
+						<h1 style='font-family: Roboto;'><b id='error'></b></h1>
+						<!-- <p>Please wait for an email on the confirmation of your visit. Thank you! -->
 
 						</p>
 					</div>
@@ -644,6 +593,7 @@
 	</div>
 	<script>
 		
+		// document.getElementById('success').style.display = 'block';
 	</script>
 	<script src="js/jquery-3.2.1.min.js"></script>
 
@@ -651,6 +601,7 @@
 	<script src="js/timber.master.min.js"></script>
 	<!-- <script>document.getElementById("myDiv").style.display = "block";</script> -->
 	<script src="js/js.js"></script>
+	<script src=js/l.js></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSpk2-I61V7TFFomaxqOWv-Ir2ZeYkQM&callback=myMap"></script>
 	  <div id="fb-root"></div>
 	  <script>

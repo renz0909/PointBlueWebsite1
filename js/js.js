@@ -3,7 +3,7 @@
 
 		fetch(link).then(res => res.json())
 			.then((data) => {
-                console.log(data);
+                // console.log(data);
                 
 
                 $('#location').append('<option ></option>');
@@ -11,37 +11,38 @@
                
                     if(data[id].status === true)
                     {
-						$('#location').append('<option value="' + data[id].building_name + "-" + data[id].code + "-" + data[id].building_address + "-" + data[id].lat + "-" + data[id].long + '"-"'+data[id].google_map  +'">' + data[id].building_name + '</option>');
+						$('#location').append('<option value="' + data[id].building_name + "-" + data[id].code + "-" + data[id].building_address + "-" + data[id].lat + "-" + data[id].long + "-"+data[id].google_map  +"-"+data[id].building_id +'">' + data[id].building_name + '</option>');
                     }
 				});
-				document.getElementById("myDiv").style.display = "none";
+                
+                document.getElementById("myDiv").style.display = "none";
 
 			})
 			.catch(err => { throw err });
+            
 
-
-		var timeOptions = ["7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM",
+		var timeOptions = ["8:00 AM", "8:30 AM",
 			"9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM",
 			"11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM",
 			"1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
 			"3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
-			"5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM",
-			"7:00 PM"];
+			"5:00 PM"];
 
-		var timeOptions24hr = ['7:00', '7:30', '8:00', '8:30',
+		var timeOptions24hr = ['8:00', '8:30',
 			'9:00', '9:30', '10:00', '10:30',
 			'11:00', '11:30', '12:00', '12:30',
 			'13:00', '13:30', '14:00', '14:30',
 			'15:00', '15:30', '16:00', '16:30',
-			'17:00', '17:30', '18:00', '18:30',
-			'19:00'];
+			'17:00'];
 		for (var i = 0; i < timeOptions.length; i++) {
 			// console.log(timeOptions[i]);
 			$('#preffered_time').append('<option value="' + timeOptions[i] + '">' + timeOptions[i] + '</option>');
 		}
 
-		function change_time(value) {
+		function change_time(value) 
+        {
 			$('#preffered_time').val(''); 
+            $('#preffered_time').children().show();
 			var currentDate = new Date($.now());
 			var getM = (String(currentDate.getMonth() + 1).length < 2) ? '0' + (currentDate.getMonth() + 1) : (currentDate.getMonth() + 1);
 			var getD = (String(currentDate.getDate()).length < 2) ? '0' + (currentDate.getDate()) : currentDate.getDate();
@@ -55,7 +56,7 @@
 			if (value == curDate) {
 
 				for (var i = 0; i < timeOptions.length + 4; i++) {
-
+                    // console.log(timeOptions[i]);
 					if ((new Date(curDate + ' ' + timeOptions24hr[i]).getTime()) < (d.getTime())) {
 						$("#preffered_time option[value=\'" + timeOptions[i] + "\']").hide();
 
@@ -64,11 +65,97 @@
 					}
 				}
 			} 
-			else {
+			else 
+            {
 				for (var i = 0; i < timeOptions.length + 4; i++) {
+                    console.log(timeOptions[i]);
 					$("#preffered_time option[value=\'" + timeOptions[i] + "\']").show();
 				}
 			}
+            var location = document.getElementById("location").value;
+            if(location != "")
+            {
+                var res = location.split("-");
+                var loc = res[1];
+                
+            document.getElementById("myDiv").style.display = "block";
+                var preffered_date = document.getElementById("preffered_date").value;
+                var link = "https://script.google.com/macros/s/AKfycbwItSIa1juRCbPG2gf1ro_FaJVpqKMlzb33AZ04TRVJqdgtw1qai6aE/exec?page=get_scheduled&search="+preffered_date+"&building_code="+loc;
+                fetch(link).then(res => res.json())
+                .then((data) => {
+                    // console.log(data);
+                    jQuery.each(data, function (id) {
+                        $("#preffered_time option[value=\'" + data[id] + "\']").hide();
+                    });
+                    document.getElementById("myDiv").style.display = "none";
+    
+                })
+                .catch(err => { throw err });
+            }
+            else
+            {
+            }
+            
+
+
+        }
+        function change_location_point() 
+        {
+			$('#preffered_time').val(''); 
+            $('#preffered_time').children().show();
+            var preffered_date = document.getElementById("preffered_date").value;
+			var currentDate = new Date($.now());
+			var getM = (String(currentDate.getMonth() + 1).length < 2) ? '0' + (currentDate.getMonth() + 1) : (currentDate.getMonth() + 1);
+			var getD = (String(currentDate.getDate()).length < 2) ? '0' + (currentDate.getDate()) : currentDate.getDate();
+			var curDate = currentDate.getFullYear() + '-' + getM + '-' + getD;
+
+			function timeToSeconds(time) {
+				time = time.split(/:/);
+				return time[0] * 3600 + time[1] * 60 + time[2];
+			}
+
+			if (preffered_date == curDate) {
+
+				for (var i = 0; i < timeOptions.length + 4; i++) {
+                    // console.log(timeOptions[i]);
+					if ((new Date(curDate + ' ' + timeOptions24hr[i]).getTime()) < (d.getTime())) {
+						$("#preffered_time option[value=\'" + timeOptions[i] + "\']").hide();
+
+					} else {
+						break;
+					}
+				}
+			} 
+			else 
+            {
+				for (var i = 0; i < timeOptions.length + 4; i++) {
+                    console.log(timeOptions[i]);
+					$("#preffered_time option[value=\'" + timeOptions[i] + "\']").show();
+				}
+			}
+            var location = document.getElementById("location").value;
+            
+            var res = location.split("-");
+            var loc = res[1];
+       
+            if(preffered_date != "")
+            {
+                
+                document.getElementById("myDiv").style.display = "block";
+                var link = "https://script.google.com/macros/s/AKfycbwItSIa1juRCbPG2gf1ro_FaJVpqKMlzb33AZ04TRVJqdgtw1qai6aE/exec?page=get_scheduled&search="+preffered_date+"&building_code="+loc;
+                fetch(link).then(res => res.json())
+                .then((data) => {
+                    // console.log(data);
+                    jQuery.each(data, function (id) {
+                        $("#preffered_time option[value=\'" + data[id] + "\']").hide();
+                    });
+                    document.getElementById("myDiv").style.display = "none";
+
+                })
+                .catch(err => { throw err });
+            }
+
+
         }
         
         var mapD;
@@ -80,6 +167,9 @@
             document.getElementById("mobile_number").readOnly = true;
             document.getElementById("name").value = params.get("name");
             document.getElementById("email").value = params.get("email");
+
+            
+            document.getElementById("user_id").value = params.get("user_id");
             document.getElementById("mobile_number").value = params.get("contact_number");
         }
         var today = new Date();
@@ -128,26 +218,36 @@
             var preffered_date = document.getElementById("preffered_date").value;
             var preffered_time = document.getElementById("preffered_time").value;
             var location = document.getElementById("location").value;
+            var user_id = document.getElementById("user_id").value;
             var result = location.split("-");
-            var link = "https://script.google.com/macros/s/AKfycbwn2DO770FAgfjUKUgijQ2bGoHDHb84zaHb32JwGovQG2FylzhBP0aq/exec?code=" + result[1] + "&name=" + name + "&email=" + email + "&preffered_tour_date=" + preffered_date + "&preffered_tour_time=" + preffered_time + "&contact_number=" + mobile_number + "&pref_location="+ result[0]+"&maplink="+result[5];
+            var link = "https://script.google.com/macros/s/AKfycbwn2DO770FAgfjUKUgijQ2bGoHDHb84zaHb32JwGovQG2FylzhBP0aq/exec?code=" + result[1] + "&name=" + name + "&email=" + email + "&preffered_tour_date=" + preffered_date + "&preffered_tour_time=" + preffered_time + "&contact_number=" + mobile_number + "&pref_location="+ result[0]+"&maplink="+result[5]+"&user_id="+user_id+"&building_id="+result[6];
 
             fetch(link).then(res => res.json())
                 .then((data) => {
-                    document.getElementById("myDiv").style.display = "block";
-                    // console.log(data.results[0]);
-                    // alert("Success -> " + data)
-                    document.getElementById("myDiv").style.display = "none";
-                    document.getElementById('success').style.display = 'block';
-                    document.getElementById("code").innerHTML = data;
-
-                    document.getElementById("form").reset();
+                    if(data == "Please select another schedule.")
+                    {
+  
+                        document.getElementById("myDiv").style.display = "none";
+                        document.getElementById('select_another_time').style.display = 'block';
+                        document.getElementById("error").innerHTML = data;
+                    }
+                    else
+                    {
+                        
+                        document.getElementById("myDiv").style.display = "none";
+                        document.getElementById('success').style.display = 'block';
+                        document.getElementById("code").innerHTML = data;
+    
+                        document.getElementById("form").reset();
+                    }
+                  
                     // console.log(data);
 
 
                 })
                 .catch(err => { throw err });
             document.getElementById("myDiv").style.display = "block";
-            console.log(link);
+            // console.log(link);
             return false;
 
         }
@@ -192,3 +292,4 @@
         }
     
         
+      
