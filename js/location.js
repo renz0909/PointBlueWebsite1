@@ -6,7 +6,7 @@ var link = "https://script.google.com/a/macros/pointblue.ph/s/AKfycbxJU30J22K1z3
 
 fetch(link).then(res => res.json())
 .then((data) => {
-
+    console.log(data);
     var inclusions = data.inclusions;
     inclusions = inclusions.replace(/(\r\n|\n\r|\r|\n)/g, '<br>');
     var neareast_landmark = data.neareast_landmark;
@@ -19,7 +19,35 @@ fetch(link).then(res => res.json())
       document.getElementById("inclusions").innerHTML = inclusions;
       document.getElementById("accessibility").innerHTML = neareast_landmark;
       document.getElementById("security").innerHTML = security;
+      document.getElementById("address_loc").innerHTML = data.building_address;
+      document.getElementById("address_loc_href").href = data.google_map;
     //   document.getElementById("vicinity_map").href = data.google_map;
+    myMap(data.lat,data.long)
+
+
+
+    var mapD;
+    function myMap(lat, lang) {
+        var iconbase = 'images/assets/map-marker-mini.png';
+      
+            var latD = lat;
+            var lngD = lang;
+            var mapCanvasD = document.getElementById("mapD");
+            var mapOptionsD = {
+                center: new google.maps.LatLng(latD, lngD),
+                zoom: 17,
+                scrollwheel: false
+            };
+             mapD = new google.maps.Map(mapCanvasD, mapOptionsD);
+            var markerD = new google.maps.Marker({
+                position: new google.maps.LatLng(latD, lngD),
+                map: mapD,
+            });
+        
+
+    }
+
+
     var tm = 'js/jquery.tm.avalanche.js';
     $.getScript(tm);
     var timber = 'js/timber.master.min.js';
@@ -29,15 +57,15 @@ fetch(link).then(res => res.json())
 
       var slideshow = '<div class="slideshow-container" >';
 
-      jQuery.each(data.images, function (id) {
-         slideshow += '<div class="mySlides fade">';
-         slideshow += '<img src="'+data.images[id]+'" style="width:100%">';
-         slideshow += '</div>';
+          jQuery.each(data.images, function (id) {
+            slideshow += '<div class="mySlides fade">';
+            slideshow += '<img src="'+data.images[id]+'" style="width:100%">';
+            slideshow += '</div>';
 
-    });
-    slideshow += '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>';
-    slideshow += '<a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>';
-    slideshow += '</div>';
+        });
+        slideshow += '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>';
+        slideshow += '<a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>';
+        slideshow += '</div>';
         
     slideshow += '<div style="text-align:center">';
     jQuery.each(data.images, function (id) {
@@ -60,12 +88,10 @@ fetch(link).then(res => res.json())
               function plusSlides(n) {
                 showSlides(slideIndex += n);
               }
-              
               // Thumbnail image controls
               function currentSlide(n) {
                 showSlides(slideIndex = n);
               }
-              
               function showSlides(n) {
                 var i;
                 var slides = document.getElementsByClassName("mySlides");

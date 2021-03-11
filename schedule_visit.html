@@ -408,7 +408,6 @@
 														id="preffered_time" tabindex="6" required>
 														<option selected="" disabled="">--:-- --</option>
 													</select>
-
 												</div>
 											</div>
 										</div>
@@ -484,7 +483,7 @@
 
 				</div>
 			</div>
-			<div id="select_another_time" class="w3-modal " style='color:black'>
+			<div id="select_another_time" class="w3-modal " style='color:black;'>
 				<div class="w3-modal-content m_design" style='width:600px;border-radius:7px;'>
 					<header style='background-color:#444c74;padding:10px;border-top-left-radius: 7px;border-top-right-radius: 7px;' class="w3-container ">
 						<a href='#'> <span onclick="document.getElementById('select_another_time').style.display='none'"
@@ -494,10 +493,11 @@
 							</span></a>
 						<h5 style='color:white;margin:0px;font-family: Roboto;'><b>Point Blue Team</b></h5>
 					</header>
-					<div class="w3-container w3-center" style="font-family: Roboto;">
+					<div class="w3-container" style="font-family: Roboto,sans-serif;">
 						<br>
 						<!-- <p>Your request has been submitted successfully. Your Tour Reference Number is </p> -->
-						<h1 style='font-family: Roboto;'><b id='error'></b></h1>
+						<h2 style='font-family: Roboto,sans-serif;'><b>Error</b></h2>
+						<h4 style='font-family: Roboto,sans-serif;' id='error'><b>Please select another schedule.</b></h4>
 						<!-- <p>Please wait for an email on the confirmation of your visit. Thank you! -->
 
 						</p>
@@ -596,7 +596,6 @@
 		// document.getElementById('success').style.display = 'block';
 	</script>
 	<script src="js/jquery-3.2.1.min.js"></script>
-
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script> -->
 	<script src="js/timber.master.min.js"></script>
 	<!-- <script>document.getElementById("myDiv").style.display = "block";</script> -->

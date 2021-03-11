@@ -3,6 +3,7 @@
 
 <head>
 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139947968-1"></script>
   <script>
@@ -169,12 +170,8 @@
                   <li >
                     <a href='locations.html'>Locations</a>
                     <ul class="sub-menu"  id='location_request'>
-                      
-                     
                     </ul>
                   </li>
-
-                  <!-- <li><a href="locations.html">Locations</a></li> -->
                   <li><a href=index.html#design >Design & Inclusions</a></li>
                   <li><a href=index#fees >Monthly Fees</a></li>
                   <li><a href="projects.html">Upcoming Projects</a></li>
@@ -182,7 +179,6 @@
 										<a href="#" class="scroll-link contains-sub-menu">FAQ</a>
 										<ul class="sub-menu">
 											<li><a href="faq.html">Frequent Questions</a></li>
-
 											<li><a href="covid.html">COVID-19 Protocols</a></li>
 										</ul>
 									</li>
@@ -193,12 +189,6 @@
                       <li><a href="schedule_visit.html">Schedule a Visit</a></li>
                     </ul>
                   </li>
-                  <!-- <li class=current>
-                    <p
-                      class="rounded medium bkg-hover-theme button color-white virtual-tour virtual-tour-focus virtual-tour-hover">
-                      <a href="contact_us.html">&nbsp;<b>Virtual Tour</b>&nbsp;&nbsp;</a>
-                    </p>
-                  <li class=current><a href="covid.html"><b><u>COVID-19</u></b></a> -->
                 </ul>
               </nav>
             </div>
@@ -206,17 +196,12 @@
         </div>
       </header>
     </div>
-
-
-
     <div class="section-block replicable-content bkg-grey-ultralight">
     <div class='wrapper bkg-grey-ultralight'>
       <div class="column width-6 bkg-grey-ultralight">
-
         <div class="tm-slider-container hero-slider" id="locations">
           <h3 class=mb-40 style="padding-left:30px!important; margin:0;" id='building_name'>Bonifacio Point</h3>
           <p class=lead style="padding-left:30px!important" id='address'>2063 Nuestra Senora de Guadalupe, Makati City </p>
-
           <div class="location-description" style="padding-left:30px!important">
             <i id='start_price'>Starts at Php 13,900</i></p>
             <div class="row">
@@ -241,7 +226,6 @@
                   10 min walk to JP Morgan BGC<br>
                   10 min ride to Ayala Avenue
                 </p>
-
               <strong>Security:</strong><br>
               <p id='security'>
                   Biometric access points<br>
@@ -251,10 +235,8 @@
             </div>
             <center>
               <div id='footer_buttons_header'>
-                <a id='vicinity_map' href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.681681440035!2d121.0437653148399!3d14.560186989828267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8580ecb2cc7%3A0xd34be328b97e2bfa!2sBonifacio+Point!5e0!3m2!1sen!2sph!4v1490254471209"
-                  class="lightbox-link" data-content=iframe data-modal-mode="" data-toolbar="">
-                  <button class="small other-buttons button color-white"><b>Vicinity Map</b></button>
-                </a>
+                  <button  onclick="document.getElementById('success').style.display='block'" class="small other-buttons button color-white"><b>Vicinity Map</b></button>
+               
                 <a href="schedule_visit.html" target='_blank'>
                   <button class="small other-buttons button color-white"><b>Schedule a Visit</b></button>
                 </a>
@@ -263,14 +245,10 @@
                   for a Unit</b></button></a>
               </div>
             </center>
-
           </div>
-
         </div>
       </div>
       <div class="column width-6 bkg-grey-ultralight" id='loc'>
-      
-    
       </div>
       <div class="column width-12 bkg-grey-ultralight" id='virtual_tour_link' style='display:none;'>
         <div class="tm-slider-container hero-slider" >
@@ -280,13 +258,10 @@
           <div class="column width-6 mt-40">
             <iframe width='420' height='520' id='link_virtual_tour' src='https://my.matterport.com/show/?m=dmbraKVoXuh' frameborder='0' allowfullscreen allow='vr'></iframe>
             <p align="center" style="font-size:13px;"><sub><i>Interior decorations for the units are for staging purposes only. Point Blue is not responsible for providing any furniture, items, or goods as displayed in the photos unless otherwise stated.</i><sub></p>                                
-  
             <center>
               <div>
-                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5970413171153!2d121.0107758602546!3d14.565021087339206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c907b735c4f5%3A0xc741381addd355c3!2sEstrella%20by%20Point%20Blue!5e0!3m2!1sen!2sph!4v1592422580276!5m2!1sen!2sph""
-                  class="lightbox-link" data-content=iframe data-modal-mode="" data-toolbar="">
-                  <button class="small other-buttons button color-white"><b>Vicinity Map</b></button>
-                </a>
+                <button  onclick="document.getElementById('success').style.display='block'" class="small other-buttons button color-white"><b>Vicinity Map</b></button>
+               
                 <a href="../schedule_visit.html"  target='_blank'>
                   <button class="small other-buttons button color-white"><b>Schedule a Visit</b></button>
                 </a>
@@ -298,6 +273,24 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div id="success" class="w3-modal " style='color:black'>
+    <div class="w3-modal-content m_design w3-card-12" style='border-radius:7px;'>
+      <header style=';padding:10px;border-top-left-radius: 7px;border-top-right-radius: 7px;' class="w3-container ">
+        <a  onclick="document.getElementById('success').style.display='none'" > <span 
+            class=" w3-display-topright"
+            style='padding:0px;color:white;margin:0px;background-color:transparent;margin:10px;'>
+            <h5 style='color:black;'>&times;</h5>
+          </span></a>
+        <a href="" id='address_loc_href' target='_blank' ><h5 style='color:black;margin:0px;font-family: Roboto;color:blue;' ><b id='address_loc'>Addres Link</b></h5></a>
+      </header>
+      <div class="w3-container w3-center" style="font-family: Roboto;">
+      
+          <div id="mapD" style="height:500px;"></div>
+          <Br>
+      </div>
+
     </div>
   </div>
   <footer class="border-top footer footer-light">
@@ -384,17 +377,18 @@
   </footer>
   </div>
   </div>
-  
   <script src="js/location.js"></script>
   <script src=js/jquery-3.2.1.min.js></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3JCAhNj6tVAO_LSb8M-AzMlidiT-RPAs"></script>
-  <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
-
-  </script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src=js/jquery.tm.avalanche.js></script>
   <script src=js/timber.master.min.js></script>
   <script src=js/l.js></script>
+  
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSpk2-I61V7TFFomaxqOWv-Ir2ZeYkQM&callback=myMap"></script>
+  <script>
+		
+		// document.getElementById('success').style.display = 'block';
+	</script>
   <div id="fb-root"></div>
   <script>
     window.fbAsyncInit = function () {
@@ -416,5 +410,4 @@
   <div class="fb-customerchat" attribution=setup_tool page_id="463900637331486">
   </div>
 </body>
-
 </html>

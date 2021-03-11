@@ -19,26 +19,30 @@
 
 			})
 			.catch(err => { throw err });
-            
+    var timeOptions = [];
+    var timeOptions24hr = [];
+    document.getElementById("myDiv").style.display = "block";
+    var link = "https://script.google.com/macros/s/AKfycbwItSIa1juRCbPG2gf1ro_FaJVpqKMlzb33AZ04TRVJqdgtw1qai6aE/exec?page=get_time";
 
-		var timeOptions = ["8:00 AM", "8:30 AM",
-			"9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM",
-			"11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM",
-			"1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
-			"3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM",
-			"5:00 PM"];
+    fetch(link).then(res => res.json())
+        .then((data) => {
+            console.log(data);
+            document.getElementById("myDiv").style.display = "none";
+            var a = 0;
+            jQuery.each(data, function (id) {
+                var id_time = data[id].time;
+                id_time = id_time.replace(" ","");
+                        $('#preffered_time').append('<option id="t_'+id_time+'" value="' + data[id].id + '">' + data[id].time + '</option>');
 
-		var timeOptions24hr = ['8:00', '8:30',
-			'9:00', '9:30', '10:00', '10:30',
-			'11:00', '11:30', '12:00', '12:30',
-			'13:00', '13:30', '14:00', '14:30',
-			'15:00', '15:30', '16:00', '16:30',
-			'17:00'];
-		for (var i = 0; i < timeOptions.length; i++) {
-			// console.log(timeOptions[i]);
-			$('#preffered_time').append('<option value="' + timeOptions[i] + '">' + timeOptions[i] + '</option>');
-		}
+                timeOptions[a] = data[id].time;
+                timeOptions24hr[a] = data[id].mil_time;
+                a++;
+            });
 
+        })
+        .catch(err => { throw err });
+        
+            console.log(timeOptions);
 		function change_time(value) 
         {
 			$('#preffered_time').val(''); 
@@ -58,20 +62,17 @@
 				for (var i = 0; i < timeOptions.length + 4; i++) {
                     // console.log(timeOptions[i]);
 					if ((new Date(curDate + ' ' + timeOptions24hr[i]).getTime()) < (d.getTime())) {
-						$("#preffered_time option[value=\'" + timeOptions[i] + "\']").hide();
+                        // alert(timeOptions[i]);
+                      
+                        var t = timeOptions[i];
+                        t = "t_"+t.replace(" ","");
+                        document.getElementById(t).style.display = 'none';
 
 					} else {
 						break;
 					}
 				}
 			} 
-			else 
-            {
-				for (var i = 0; i < timeOptions.length + 4; i++) {
-                    console.log(timeOptions[i]);
-					$("#preffered_time option[value=\'" + timeOptions[i] + "\']").show();
-				}
-			}
             var location = document.getElementById("location").value;
             if(location != "")
             {
@@ -91,9 +92,6 @@
     
                 })
                 .catch(err => { throw err });
-            }
-            else
-            {
             }
             
 
@@ -116,23 +114,20 @@
 
 			if (preffered_date == curDate) {
 
-				for (var i = 0; i < timeOptions.length + 4; i++) {
+                for (var i = 0; i < timeOptions.length + 4; i++) {
                     // console.log(timeOptions[i]);
 					if ((new Date(curDate + ' ' + timeOptions24hr[i]).getTime()) < (d.getTime())) {
-						$("#preffered_time option[value=\'" + timeOptions[i] + "\']").hide();
+                    
+                        var t = timeOptions[i];
+                        t = "t_"+t.replace(" ","");
+                        document.getElementById(t).style.display = 'none';
 
 					} else {
 						break;
 					}
 				}
 			} 
-			else 
-            {
-				for (var i = 0; i < timeOptions.length + 4; i++) {
-                    console.log(timeOptions[i]);
-					$("#preffered_time option[value=\'" + timeOptions[i] + "\']").show();
-				}
-			}
+		
             var location = document.getElementById("location").value;
             
             var res = location.split("-");
@@ -154,8 +149,6 @@
                 })
                 .catch(err => { throw err });
             }
-
-
         }
         
         var mapD;
@@ -291,5 +284,6 @@
             mapD.panTo({"lat":latD,"lng":lngD});
         }
     
+        
         
       
