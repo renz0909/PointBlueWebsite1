@@ -1,0 +1,1 @@
+gsutil -m cp -a public-read -R * gs://www.pointblue.ph
