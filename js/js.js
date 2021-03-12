@@ -77,7 +77,7 @@
             if(location != "")
             {
                 var res = location.split("-");
-                var loc = res[1];
+                var loc = res[6];
                 
             document.getElementById("myDiv").style.display = "block";
                 var preffered_date = document.getElementById("preffered_date").value;
