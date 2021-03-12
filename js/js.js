@@ -131,7 +131,7 @@
             var location = document.getElementById("location").value;
             
             var res = location.split("-");
-            var loc = res[1];
+            var loc = res[6];
        
             if(preffered_date != "")
             {
